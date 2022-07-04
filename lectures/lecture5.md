@@ -13,15 +13,15 @@ noline: 1
 
 These are best read in order!
 
-- [Significance and Size](../wiki/doseplacebo.html)
-- [Learning without noise](../wiki/noiseless_learning.html)
-- [Learning with noise](../wiki/noisylearning.html)
-- [Test set to compute out-of-sample risk](../wiki/testingtraining.html)
-- [Validation and Cross Validation](../wiki/validation.html)
-- [Regularization](../wiki/regularization.html)
-- [Jensen's Inequality](../wiki/jensens.html) about convex functions
-- [Divergence and Deviance](../wiki/Divergence.html)
-- [Understanding AIC](../wiki/understandingaic.html)
+- [Significance and Size](../wiki/doseplacebo.md)
+- [Learning without noise](../wiki/noiseless_learning.md)
+- [Learning with noise](../wiki/noisylearning.md)
+- [Test set to compute out-of-sample risk](../wiki/testingtraining.md)
+- [Validation and Cross Validation](../wiki/validation.md)
+- [Regularization](../wiki/regularization.md)
+- [Jensen's Inequality](../wiki/jensens.md) about convex functions
+- [Divergence and Deviance](../wiki/Divergence.md)
+- [Understanding AIC](../wiki/understandingaic.md)
 
 ## Readings
 

@@ -259,10 +259,10 @@ $$
 In general, a polynomial can be written thus:
 
 $$
-\begin{eqnarray*}
+\begin{aligned}
  h(x) &=& a_0 + a_1 x^1 + a_2 x^2 + ... + a_n x^n \\
       &=& \sum_{i=0}^{n} a_i x^i
-\end{eqnarray*}
+\end{aligned}
 $$
 
 Thus, by linearly we mean a sum of coefficients $a_i$ times powers of $x$, $x^i$. In other words, the polynomial is **linear in its coefficients**.
@@ -487,12 +487,12 @@ Once we have done that, we can then intuitively say that, if we find a hypothesi
 
 Mathematically, we are saying that:
 
-$$
-\begin{eqnarray*}
+
+$$\begin{aligned}
 A &:& R_{\cal{D}}(g) \,\,smallest\,on\,\cal{H}\\
 B &:& R_{out} (g) \approx R_{\cal{D}}(g)
-\end{eqnarray*}
-$$
+\end{aligned}$$
+
 
 In other words, we hope the **empirical risk estimates the out of sample risk well, and thus the out of sample risk is also small**.
 

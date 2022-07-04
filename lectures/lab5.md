@@ -5,4 +5,4 @@ layout: "default"
 noline: 1
 ---
 
-- [Material](../wiki/logregnormalppc.html)
+- [Material](../wiki/logregnormalppc.md)

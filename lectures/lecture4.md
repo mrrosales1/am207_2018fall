@@ -13,12 +13,12 @@ noline: 1
 
 These are best read in order!
 
-- [Learning without noise](../wiki/noiseless_learning.html)
-- [Learning with noise](../wiki/noisylearning.html)
-- [Maximum Likelihood Estimation](../wiki/MLE.html)
-- [Test set to compute out-of-sample risk](../wiki/testingtraining.html)
-- [Validation and Cross Validation](../wiki/validation.html)
-- [Regularization](../wiki/regularization.html)
+- [Learning without noise](../wiki/noiseless_learning.md)
+- [Learning with noise](../wiki/noisylearning.md)
+- [Maximum Likelihood Estimation](../wiki/MLE.md)
+- [Test set to compute out-of-sample risk](../wiki/testingtraining.md)
+- [Validation and Cross Validation](../wiki/validation.md)
+- [Regularization](../wiki/regularization.md)
 
 ## Readings
 

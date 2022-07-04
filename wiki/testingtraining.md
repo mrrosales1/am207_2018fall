@@ -205,10 +205,10 @@ The process of learning has two parts:
 Mathematically, we are saying that:
 
 $$
-\begin{eqnarray*}
+\begin{aligned*}
 A &:& R_{\cal{D}}(g) \,\,smallest\,on\,\cal{H}\\
 B &:& R_{out \,of \,sample} (g) \approx R_{\cal{D}}(g)
-\end{eqnarray*}
+\end{aligned*}
 $$
 
 Hoping does not befit us as scientists. How can we test that the in-sample risk approximates the out-of-sample risk well?

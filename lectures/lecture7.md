@@ -11,11 +11,11 @@ noline: 1
 
 ## Notes
 
-- [Divergence and Deviance](../wiki/Divergence.html)
-- [Entropy](../wiki/Entropy.html)
-- [First part of Bayes notebook](../wiki/bayes_withsampling.html)
-- [Bernoulli/Binomial Models like coins and globe tosses](../wiki/globemodel.html)
-- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.html)
+- [Divergence and Deviance](../wiki/Divergence.md)
+- [Entropy](../wiki/Entropy.md)
+- [First part of Bayes notebook](../wiki/bayes_withsampling.md)
+- [Bernoulli/Binomial Models like coins and globe tosses](../wiki/globemodel.md)
+- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.md)
 
 ## Readings
 

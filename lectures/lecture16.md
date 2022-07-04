@@ -12,17 +12,17 @@ noline: 1
 
 ## Notes
 
-- [Markov](../wiki/markov.html)
-- [Metropolis](../wiki/metropolis.html)
-- [Discrete MCMC](../wiki/discretemcmc.html)
-- [Bayes](../wiki/bayes_withsampling.html)
-- [Intro to Gibbs Sampling](../wiki/introgibbs.html)
-- [Hierarchical Models](../wiki/hierarch.html)
-- [Metropolis-Hastings](../wiki/metropolishastings.html)
-- [Metropolis Support](../wiki/MetropolisSupport.html)
-- [Switchpoint Model](../wiki/switchpoint.html)
-- [Gibbs from Metropolis-Hastings](../wiki/gibbsfromMH.html)
-- [Gibbs with conditional a conjugate](../wiki/gibbsconj.html)
+- [Markov](../wiki/markov.md)
+- [Metropolis](../wiki/metropolis.md)
+- [Discrete MCMC](../wiki/discretemcmc.md)
+- [Bayes](../wiki/bayes_withsampling.md)
+- [Intro to Gibbs Sampling](../wiki/introgibbs.md)
+- [Hierarchical Models](../wiki/hierarch.md)
+- [Metropolis-Hastings](../wiki/metropolishastings.md)
+- [Metropolis Support](../wiki/MetropolisSupport.md)
+- [Switchpoint Model](../wiki/switchpoint.md)
+- [Gibbs from Metropolis-Hastings](../wiki/gibbsfromMH.md)
+- [Gibbs with conditional a conjugate](../wiki/gibbsconj.md)
 
 ## Readings
 

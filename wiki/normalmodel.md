@@ -85,7 +85,7 @@ $$ p( \mu \vert  y_1, \ldots, y_n, \sigma^2)  \propto \exp\left\{ -\frac{1}{2} \
 
 **The conjugate of the normal is the normal itself**. 
 
-Define $\kappa = \sigma^2 / \tau^2 $ to be the variance of the sample model  in units of variance
+Define $\kappa = \sigma^2 / \tau^2$ to be the variance of the sample model  in units of variance
 of our prior belief (prior distribution) then the *posterior mean* is 
 
 $$\mu_p = \frac{b}{a} = \frac{ \kappa}{\kappa + n }  \hat{\mu} + \frac{n}{\kappa + n} \bar{y} $$

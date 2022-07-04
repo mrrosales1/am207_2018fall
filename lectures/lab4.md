@@ -5,4 +5,4 @@ layout: "default"
 noline: 1
 ---
 
-- [Globe Model](../wiki/globemodellab.html)
+- [Globe Model](../wiki/globemodellab.md)

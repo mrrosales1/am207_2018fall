@@ -7,7 +7,7 @@ noline: 1
 
 ## Notes
 
-- [Correlation Modeling for Exam](../wiki/corr.html)
+- [Correlation Modeling for Exam](../wiki/corr.md)
 
 ## Slides
 

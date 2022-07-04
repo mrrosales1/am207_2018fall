@@ -11,11 +11,11 @@ noline: 1
 
 ## Notes
 
-- [Gradient Descent and SGD](../wiki/gradientdescent.html)
-- [Backpropagation for Logistic Regression](../wiki/LogisticBP.html)
-- [Regression in Torch](../wiki/FuncTorch.html)
-- [Playing with regression and Universal Approximation](../wiki/nnreg.html)
-- [Multi Layer Perceptron for Classification](../wiki/MLP_Classification.html)
+- [Gradient Descent and SGD](../wiki/gradientdescent.md)
+- [Backpropagation for Logistic Regression](../wiki/LogisticBP.md)
+- [Regression in Torch](../wiki/FuncTorch.md)
+- [Playing with regression and Universal Approximation](../wiki/nnreg.md)
+- [Multi Layer Perceptron for Classification](../wiki/MLP_Classification.md)
 
 ## Readings and Videos
 

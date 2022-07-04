@@ -5,5 +5,5 @@ layout: "default"
 noline: 1
 ---
 
-- [Regression Data Fits](../wiki/reggen.html)
-- [Some Python](../wiki/some_python.html)
+- [Regression Data Fits](../wiki/reggen.md)
+- [Some Python](../wiki/some_python.md)

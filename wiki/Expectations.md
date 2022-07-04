@@ -160,10 +160,10 @@ The law of large numbers is what makes the **frequentist** interpretation of pro
 
 We saw above from the LOTUS that if we consider any event $A$ from a probability distribution $F$ with random variable X, and consider the indicator function $I_A$ such that:
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 I_A(x) = 1 \,&& if \, x \in A\\
 I_A(x) = 0 \,&&  otherwise
-\end{eqnarray}$$
+\end{aligned}$$
 
 we have that:
 

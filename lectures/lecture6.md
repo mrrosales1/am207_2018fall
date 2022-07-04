@@ -11,7 +11,7 @@ noline: 1
 
 ## Notes
 
-- [Jensen's Inequality](../wiki/jensens.html) about convex functions
-- [Divergence and Deviance](../wiki/Divergence.html)
-- [Understanding AIC](../wiki/understandingaic.html)
-- [Entropy](../wiki/Entropy.html)
+- [Jensen's Inequality](../wiki/jensens.md) about convex functions
+- [Divergence and Deviance](../wiki/Divergence.md)
+- [Understanding AIC](../wiki/understandingaic.md)
+- [Entropy](../wiki/Entropy.md)

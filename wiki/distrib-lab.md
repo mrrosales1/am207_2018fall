@@ -1312,10 +1312,10 @@ $$X \sim Bernoulli(p),$$
 
 which is to be read as **X has distribution Bernoulli(p)**. The **probability distribution function (pdf)** or **probability mass function** associated with the Bernoulli distribution is
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 P(X = 1) &=& p \\
 P(X = 0) &=& 1 - p 
-\end{eqnarray}$$
+\end{aligned}$$
 
 for p in the range 0 to 1. 
 The **pdf**, or the probability that random variable $X=x$ may thus be written as 
@@ -1390,10 +1390,10 @@ $$X \sim Uniform([0,1),$$
 
 which is to be read as **X has distribution Uniform([0,1])**. The **probability distribution function (pdf)** associated with the Uniform distribution is
 
-\begin{eqnarray}
+\begin{aligned}
 P(X = x) &=& 1 \, for \, x \in [0,1] \\
 P(X = x) &=& 0 \, for \, x \notin [0,1]
-\end{eqnarray}
+\end{aligned}
 
 What assigning the vote to Obama when the random variable **drawn** from the Uniform distribution is less than the Predictwise probability of Obama winning (which is a Bernoulli Parameter) does for us is this: if we have a large number of simulations and $p_{Obama}=0.7$ , then 70\% of the time, the random numbes drawn will be below 0.7. And then, assigning those as Obama wins will hew to the frequentist notion of probability of the Obama win. But remember, of course, that in 30% of the simulations, Obama wont win, and this will induce fluctuations and a distribution on the total number of electoral college votes that Obama gets. And this is what we will see in the histogram below. 
 

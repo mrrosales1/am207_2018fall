@@ -134,10 +134,10 @@ plt.scatter(x,y)
 The likelihood is, because we assume independency, the product 
 
 $$
-\begin{eqnarray} \like &=& p(\bf y|X,\bf w) = \prod_{i=1}^{n} p(y_i|\bf X_i, \bf w) =   \prod_{i=1}^{n}  \frac{1}{\sqrt{2\pi}\sigma_n}
+\begin{aligned} \like &=& p(\bf y|X,\bf w) = \prod_{i=1}^{n} p(y_i|\bf X_i, \bf w) =   \prod_{i=1}^{n}  \frac{1}{\sqrt{2\pi}\sigma_n}
    \exp{ \left( -\frac{(y_i-\bf X_i^T \bf w)^2}{2\sigma_n^2} \right)}  \nonumber \\ 
    &\propto &  \exp{\left( -\frac{| \bf y-X^T \bf w|^2 }{2\sigma_n^2} \right)} \propto N(X^T \bf w,  \sigma_n^2 I)
-\end{eqnarray}
+\end{aligned}
 $$
    
 where $|x|$ denotes the Euclidean length of vector $\bf x$. 
@@ -210,11 +210,11 @@ plotSampleLines(priorMean,priorCovariance,15)
 We can now continue with the standard Bayesian formalism 
 
 $$
-\begin{eqnarray}
+\begin{aligned}
  p(\bf w| \bf y,X) &\propto& p(\bf y | X, \bf w) \, p(\bf w) \nonumber \\
                        &\propto& \exp{ \left(- \frac{1}{2 \sigma_n^2}(\bf y-X^T \bf w)^T(\bf y - X^T \bf w) \right)}
                         \exp{\left( -\frac{1}{2} \bf w^T \Sigma^{-1} \bf w \right)}  \nonumber \\ 
-\end{eqnarray}
+\end{aligned}
 $$
  
 In the next step we `complete the square' and obtain 
@@ -288,10 +288,10 @@ for i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]:
 Thus the predictive distribution at some $x^{*}$ is given by averaging the output of all possible linear models w.r.t. the  posterior
 
 $$
-\begin{eqnarray} 
+\begin{aligned} 
 p(y^{*} | x^{*}, {\bf x,y}) &=& \int p({\bf y}^{*}| {\bf x}^{*}, {\bf w} ) p(\bf w| X, y)dw \nonumber \\
                                     &=& {\cal N} \left(y \vert \bar{\bf w}^{T}x^{*}, \sigma_n^2 + x^{*^T}A^{-1}x^{*} \right),
-\end{eqnarray}
+\end{aligned}
 $$
 
 

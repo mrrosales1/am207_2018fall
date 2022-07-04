@@ -129,9 +129,9 @@ Since we are dealing with probability densities, $h$ is always positive.
 Also note 
 
 $$
-\begin{eqnarray}
+\begin{aligned}
   \int h(x' \vert x) dx' = \int_{X} \int_Y p(x' \vert y) \, p(y \vert x) \, dy \, dx' = \int_Y p(y \vert x) \left[ \int_X p(x' \vert y) dx' \right] dy  = \int_Y p(y \vert x) dy  = 1
-\end{eqnarray}
+\end{aligned}
 $$
 
   

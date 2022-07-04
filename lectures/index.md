@@ -4,41 +4,41 @@ shorttitle: Lectures
 layout: "default"
 ---
 
-- [Lecture 1](lecture1.html): Intro and Probability
-- [Lab 1](lab1.html): Bayes Theorem and Python Tech
-- [Lecture 2](lecture2.html): Probability and LLN
-- [Lecture 3](lecture3.html): From Monte-Carlo to frequentism
-- [Lab 2](lab2.html): Frequentism, Bootstrap, and MLE
-- [Lecture 4](lecture4.html): MLE, Sampling, and Learning
-- [Lecture 5](lecture5.html): Regression, AIC, Info. Theory
-- [Lab 3](lab3.html): Generating regression data, fitting it, training, and testing
-- [Lecture 6](lecture6.html): Risk and Information
-- [Lecture 7](lecture7.html): From Entropy to Bayes
-- [Lab 4](lab4.html): Bayesian Quantities in the Globe Model
-- [Lecture 8](lecture8.html): Bayes and Sampling
-- [Lecture 9](lecture9.html): Bayes and Sampling
-- [Lab 5](lab5.html): Logistic Regression and Sundry Bayesian
-- [Lecture 10](lecture10.html): Sampling and Gradient Descent
-- [Lab 6](lab6.html): Sampling and PyTorch
-- [Lecture 11](lecture11.html): Gradient Descent and Neural Networks
-- [Lecture 12](lecture12.html): Non Linear Approximation to Classification
+- [Lecture 1](lecture1.md): Intro and Probability
+- [Lab 1](lab1.md): Bayes Theorem and Python Tech
+- [Lecture 2](lecture2.md): Probability and LLN
+- [Lecture 3](lecture3.md): From Monte-Carlo to frequentism
+- [Lab 2](lab2.md): Frequentism, Bootstrap, and MLE
+- [Lecture 4](lecture4.md): MLE, Sampling, and Learning
+- [Lecture 5](lecture5.md): Regression, AIC, Info. Theory
+- [Lab 3](lab3.md): Generating regression data, fitting it, training, and testing
+- [Lecture 6](lecture6.md): Risk and Information
+- [Lecture 7](lecture7.md): From Entropy to Bayes
+- [Lab 4](lab4.md): Bayesian Quantities in the Globe Model
+- [Lecture 8](lecture8.md): Bayes and Sampling
+- [Lecture 9](lecture9.md): Bayes and Sampling
+- [Lab 5](lab5.md): Logistic Regression and Sundry Bayesian
+- [Lecture 10](lecture10.md): Sampling and Gradient Descent
+- [Lab 6](lab6.md): Sampling and PyTorch
+- [Lecture 11](lecture11.md): Gradient Descent and Neural Networks
+- [Lecture 12](lecture12.md): Non Linear Approximation to Classification
 - [Lab 7] still to come
-- [Lecture 13](lecture13.html): Classification, Mixtures, and EM
-- [Lecture 14](lecture14.html): EM and Hierarchcal models
-- [Lab 8](lab8.html): EM and Hierarchicals
-- [Lecture 15](lecture15.html): MCMC
-- [Lecture 16](lecture16.html): MCMC and Gibbs
-- [Lab 9](lab9.html): Sampling and pymc3
-- [Lecture 17](lecture17.html): Data Augmentation, Gibbs, and HMC
-- [Lecture 18](lecture18.html): HMC, and Formal tests
-- [Lab 10](lab10.html): Jacobians and Tumors
-- [Lecture 19](lecture19.html): NUTS, Formal tests, and Hierarchicals
-- [Lecture 20](lecture20.html): Regression, GLMs, and model specification
-- [Lab 11](lab11.html): Gelman Schools Hierarchical and Prosocial Chimps GLM
-- [Lecture 21](lecture21.html): From Hierarchical GLMs to Gaussian Processes
-- [Lecture 22](lecture22.html): Decisions and Model Comparison
-- [Lecture 23](lecture23.html): Cross-Validation, Priors, and Workflow
-- [Lab 12](lab12.html): GLM and Workflow
-- [Lecture 24](lecture24.html): Variational Inference
-- [Lecture 25](lecture25.html): Variational inference and Mixtures
-- [Lecture 26](lecture26.html): Wrapup
+- [Lecture 13](lecture13.md): Classification, Mixtures, and EM
+- [Lecture 14](lecture14.md): EM and Hierarchcal models
+- [Lab 8](lab8.md): EM and Hierarchicals
+- [Lecture 15](lecture15.md): MCMC
+- [Lecture 16](lecture16.md): MCMC and Gibbs
+- [Lab 9](lab9.md): Sampling and pymc3
+- [Lecture 17](lecture17.md): Data Augmentation, Gibbs, and HMC
+- [Lecture 18](lecture18.md): HMC, and Formal tests
+- [Lab 10](lab10.md): Jacobians and Tumors
+- [Lecture 19](lecture19.md): NUTS, Formal tests, and Hierarchicals
+- [Lecture 20](lecture20.md): Regression, GLMs, and model specification
+- [Lab 11](lab11.md): Gelman Schools Hierarchical and Prosocial Chimps GLM
+- [Lecture 21](lecture21.md): From Hierarchical GLMs to Gaussian Processes
+- [Lecture 22](lecture22.md): Decisions and Model Comparison
+- [Lecture 23](lecture23.md): Cross-Validation, Priors, and Workflow
+- [Lab 12](lab12.md): GLM and Workflow
+- [Lecture 24](lecture24.md): Variational Inference
+- [Lecture 25](lecture25.md): Variational inference and Mixtures
+- [Lecture 26](lecture26.md): Wrapup

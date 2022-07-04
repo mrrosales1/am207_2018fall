@@ -5,7 +5,7 @@ layout: "default"
 noline: 1
 ---
 
-- [Jacobians](../wiki/VariableTransforms.html)
-- [Inverse Transform](../wiki/inversetransform.html)
-- [Tumors](../wiki/tumorlab.html)
-- [Tumors with pymc3](../wiki/tumor_pymc3.html)
+- [Jacobians](../wiki/VariableTransforms.md)
+- [Inverse Transform](../wiki/inversetransform.md)
+- [Tumors](../wiki/tumorlab.md)
+- [Tumors with pymc3](../wiki/tumor_pymc3.md)

@@ -148,10 +148,10 @@ $$P(y=0 \mid x) =  h_0\left(w_0 + w_1 x_1 + \;...\; + w_d x_d\right) = h_0\left(
 
 As we only have two classes, by the laws of probability $P(y=1 \mid x)$ = 1 - $P(y=0 \mid x)$.  This implies that $h_1\left({\bf w} \cdot {\bf x}\right) = 1 - h_1\left({\bf w} \cdot {\bf x}\right) $ and we can represent our equations with just the function $h$.
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 P(y=1 \mid \v{x}) &=& h(\v{w}\cdot\v{x}) \\
 P(y=0 \mid \v{x}) &=& 1 - h(\v{w}\cdot\v{x}).
-\end{eqnarray}$$
+\end{aligned}$$
 
 The model that we choose would need to fit the weights to the data but we need come up with a way to map an arbitrary linear combination of inputs, each potentially ranging in value from $-\infty$ to $\infty$ to an output value in the range of $0$ to $1$.
 
@@ -262,10 +262,10 @@ plt.plot(zs, h(zs), alpha=0.5);
 
 The conditional probabilities of $y=1$ or $y=0$ given a particular sample's features $\v{x}$ are:
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 P(y=1 | \v{x}) &=& h(\v{w}\cdot\v{x}) \\
 P(y=0 | \v{x}) &=& 1 - h(\v{w}\cdot\v{x}).
-\end{eqnarray}$$
+\end{aligned}$$
 
 These two can be written together as
 
@@ -306,12 +306,12 @@ $$\loglike = log \like = log(P(y \mid \v{x},\v{w})).$$
 
 Thus
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 \loglike &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
                   &=& \sum_{y_i \in \cal{D}} log\left(h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\                  
                   &=& \sum_{y_i \in \cal{D}} log\,h(\v{w}\cdot\v{x_i})^{y_i} + log\,\left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\\
                   &=& \sum_{y_i \in \cal{D}} \left ( y_i log(h(\v{w}\cdot\v{x_i})) + ( 1 - y_i) log(1 - h(\v{w}\cdot\v{x_i})) \right )
-\end{eqnarray}$$
+\end{aligned}$$
 
 The negative of this log likelihood (henceforth abbreviated NLL), is also called the cross-entropy, for reasons that will become clearer soon.
 

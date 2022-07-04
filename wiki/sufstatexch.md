@@ -78,10 +78,9 @@ Then, the likelihood for the first population is:
 $$ p(Y_{1,1}, \ldots, Y_{n_1,1}  \vert  \theta_1)  = \prod_{i=1}^{n_1} p(Y_{i,1} \vert \theta_1) =  \prod_{i=1}^{n_1}  \frac{1}{Y_{i,1} !} \theta_1^{Y_{i,1}} e^{-\theta_1}
 = c(Y_{1,1}, \ldots, Y_{n_1,1}) \,\, (n_{1}\theta_{1})^{\sum Y_{i,1}} e^{-n_1 \theta_1}
   \sim Poisson(n_1 \theta_1) $$
-  
 
-  
-  and similarly
+
+and similarly
 
 $$ Y_{1,2}, \ldots, Y_{n_1,2}  \vert  \theta_2 \sim Poisson(n_2\theta_2) $$
 
@@ -91,9 +90,8 @@ $$ Y_{1,2}, \ldots, Y_{n_1,2}  \vert  \theta_2 \sim Poisson(n_2\theta_2) $$
 
 The posterior is a simple product of two sub-posteriors:
 
-$$p(\theta_1 \vert  Y_{1,1}, \ldots, Y_{n_1,1} )* p(\theta_2 \vert  Y_{1,2}, \ldots, Y_{n_2,2} ) ,$$ which, given independent priors on
-
-$\theta_1$ and $\theta_2$, is:
+$$p(\theta_1 \vert  Y_{1,1}, \ldots, Y_{n_1,1} )* p(\theta_2 \vert  Y_{1,2}, \ldots, Y_{n_2,2} ) ,$$
+which, given independent priors on $\theta_1$ and $\theta_2$, is:
 
 $$c_1(n_1, y_1, \ldots, y_{n_1}) \,\, (n_{1}\theta_{1})^{\sum Y_{i,1}} e^{-n_1 \theta_1}\, p(\theta_1) \times c_2(n_2, y_1, \ldots, y_{n_2}) \,\, (n_{2}\theta_{2})^{\sum Y_{i,2}} e^{-n_2 \theta_2}  \, p(\theta_2) $$
   
@@ -118,13 +116,13 @@ This is a known family known as Gamma distributions.  In the shape-rate parametr
 
 $$p(\theta) =  \rm{Gamma}(\theta, a, b) = \frac{b^a}{\Gamma(a)} \theta^{a-1} e^{-b \theta} $$
 
-If $p(\theta) =  \rm{Gamma}(\theta, a, b)$ and $ p(Y_1 \ldots, Y_n  \vert  \theta) \sim \rm{Poisson}(\theta) $  then our posterior is:
+If $p(\theta) =  \rm{Gamma}(\theta, a, b)$ and $p(Y_1 \ldots, Y_n  \vert  \theta) \sim \rm{Poisson}(\theta)$  then our posterior is:
 
 $$  p( \theta  \vert  Y_1, \ldots, Y_n) \sim \rm{Gamma}(\theta, a+\sum Y_i, b+n) $$
 
 In other words $b$ "regularizes" the total number of moms and $a$ the kids. In other words, you have a data set of $b$ observations with an observed poisson count of $a$.
 
-Back to our example. Suppose we choose priors $p(\theta_{1,2}) \sim  \rm{Gamma}(\theta_{1,2}, a=2, b=1) $. The mean and variance of gamma distributions are known 
+Back to our example. Suppose we choose priors $p(\theta_{1,2}) \sim  \rm{Gamma}(\theta_{1,2}, a=2, b=1)$. The mean and variance of gamma distributions are known 
 
 $$ E[\theta] = a/b, var[\theta] = a/b^2 .$$
 

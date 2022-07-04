@@ -11,14 +11,14 @@ noline: 1
 
 ## Notes
 
-- [First part of Bayes notebook](../wiki/bayes_withsampling.html)
-- [Normal Model](../wiki/normalmodel.html)
-- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.html)
-- [Checking a Model](../wiki/lightspeed.html)
-- [Bayesian Regression](../wiki/bayesianregression.html)
-- [Kung San Weights from Normal model to regression](../wiki/normalreg.html)
-- [Inverse Transform for sampling](../wiki/inversetransform.html)
-- [Rejection Sampling](../wiki/rejectionsampling.html)
+- [First part of Bayes notebook](../wiki/bayes_withsampling.md)
+- [Normal Model](../wiki/normalmodel.md)
+- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.md)
+- [Checking a Model](../wiki/speedoflight.md)
+- [Bayesian Regression](../wiki/bayesianregression.md)
+- [Kung San Weights from Normal model to regression](../wiki/normalreg.md)
+- [Inverse Transform for sampling](../wiki/inversetransform.md)
+- [Rejection Sampling](../wiki/rejectionsampling.md)
 
 ## Readings
 

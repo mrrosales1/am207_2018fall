@@ -11,8 +11,8 @@ noline: 1
 
 ## Notes
 
-- [EM](../wiki/EM.html)
-- [Hierarchical Models](../wiki/hierarch.html)
+- [EM](../wiki/EM.md)
+- [Hierarchical Models](../wiki/hierarch.md)
 
 ## Readings
 

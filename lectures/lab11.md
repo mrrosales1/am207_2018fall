@@ -5,6 +5,6 @@ layout: "default"
 noline: 1
 ---
 
-- [Gelman Schools in detail](../wiki/gelmanschoolsfulllab.html)
-- [Gelman Schools Theory for Homework](../wiki/gelmanschoolstheory.html)
-- [Prosocial Chimps GLM Lab 1](../wiki/prosocialchimpslab1.html)
+- [Gelman Schools in detail](../wiki/gelmanschoolsfulllab.md)
+- [Gelman Schools Theory for Homework](../wiki/gelmanschoolstheory.md)
+- [Prosocial Chimps GLM Lab 1](../wiki/prosocialchimpslab1.md)

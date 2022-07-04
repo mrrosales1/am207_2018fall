@@ -50,19 +50,17 @@ In other words, if $p$ is nature's distribution, we want to know how far we are 
 
 This scale is called the Kullback-Leibler (KL) Divergence, introduced in 1951. It is defined thus:
 
-$$\renewcommand{\kld}{D_{KL}}$$
+$$D_{KL}(p, q) = E_p[log(p) - log(q)] = E_p[log(p/q)] = \sum_i p_i log(\frac{p_i}{q_i}) \,\,or\, \int dP log(\frac{p}{q})$$
 
-$$\kld(p, q) = E_p[log(p) - log(q)] = E_p[log(p/q)] = \sum_i p_i log(\frac{p_i}{q_i}) \,\,or\, \int dP log(\frac{p}{q})$$
-
-The distance between a distribution and itself is clearly $\kld(p,p) = 0$.
+The distance between a distribution and itself is clearly $D_{KL}(p,p) = 0$.
 
 We can use Jensen's inequality for expectations on a convex function $f(x)$, 
 
 $$ E[f(X)] \ge f(E[X]) $$
 
-to show that $\kld(p,q) \ge 0$ with equality iff (if and only if) $q=p$.
+to show that $D_{KL}(p,q) \ge 0$ with equality iff (if and only if) $q=p$.
 
-$$\kld(p,q) = E_p[log(p/q)] = E_p[-log(q/p)] \ge -\log \left( E_p[q/p] \right) = -\log(\int dQ) = 0$$
+$$D_{KL}(p,q) = E_p[log(p/q)] = E_p[-log(q/p)] \ge -\log \left( E_p[q/p] \right) = -\log(\int dQ) = 0$$
 
 where we have used the fact that $-log(x)$ is a convex function, and that $q(x)$ normalizes to a distribution. Infact, since $-\log(x)$ is strictly convex, the equality only happens if $q(x) = p(x)$ for ALL x.
 
@@ -97,11 +95,11 @@ $$H(p, q) = - E_p[log(q)]$$
 
 Then one can write:
 
-$$\kld(p, q) = H(p,q) - H(p) $$
+$$D_{KL}(p, q) = H(p,q) - H(p) $$
 
 So one can think of the KL-Divergence as the additional entropy introduced by using $q$ instead of $p$.
 
-Notice that $H(p,q)$ and $\kld(p, q)$ is not symmetric. This is by design, and indeed is important. The interpretation is that if you use a unusual , low entropy distribution to approximate a usual one, you will be more surprised than if you used a high entropy, many choices one to approximate an unusual one. An example from McElreath provides some intuition: if you went to Mars from Earth you would be less suprised than  the other way: Martians have only seen very dry..we've seen it all.
+Notice that $H(p,q)$ and $D_{KL}(p, q)$ is not symmetric. This is by design, and indeed is important. The interpretation is that if you use a unusual , low entropy distribution to approximate a usual one, you will be more surprised than if you used a high entropy, many choices one to approximate an unusual one. An example from McElreath provides some intuition: if you went to Mars from Earth you would be less suprised than  the other way: Martians have only seen very dry..we've seen it all.
 
 A corollary here is that if we use a high entropy distribution to aproximate the true one, we will incur lesser error.
 
@@ -121,7 +119,7 @@ The point here is that we dont know $p$, or else why would be doing this in the 
 
 ### Maximum Likelihood justification
 
-$$\kld(p, q) = E_p[log(p/q)] = \frac{1}{N}\sum_i (log(p_i) - log(q_i)$$
+$$D_{KL}(p, q) = E_p[log(p/q)] = \frac{1}{N}\sum_i (log(p_i) - log(q_i)$$
 
 Thus minimizing the KL-divergence involves maximizing $\sum_i log(q_i)$ which is exactly the log likelihood. Hence we can justify the maximum likelihood principle.
 
@@ -129,11 +127,11 @@ Thus minimizing the KL-divergence involves maximizing $\sum_i log(q_i)$ which is
 
 By the same token we can use the KL-Divergences of two different models to do model comparison:
 
-$$\kld(p, q) -\kld(p, r) = H(p, q) - H(p, r) = E_p[log(r) - log(q)] = E_p[log(\frac{r}{q})]$$
+$$D_{KL}(p, q) -D_{KL}(p, r) = H(p, q) - H(p, r) = E_p[log(r) - log(q)] = E_p[log(\frac{r}{q})]$$
 
 In the sample approximation we have:
 
-$$\kld(p, q) -\kld(p, r) = \frac{1}{N} \sum_i log(\frac{r_i}{q_i}) = \frac{1}{N} log(\frac{\prod_i r_i}{\prod_i q_i}) =  \frac{1}{N}log(\frac{\cal{L}_r}{\cal{L}_q})$$
+$$D_{KL}(p, q) -D_{KL}(p, r) = \frac{1}{N} \sum_i log(\frac{r_i}{q_i}) = \frac{1}{N} log(\frac{\prod_i r_i}{\prod_i q_i}) =  \frac{1}{N}log(\frac{\cal{L}_r}{\cal{L}_q})$$
 
 This ratio inside the brackets on the right is the likelihood ratio and  is used to test goodness of fit. You can read more about it in Wasserman.
 
@@ -141,15 +139,15 @@ This ratio inside the brackets on the right is the likelihood ratio and  is used
 
 If you look at the expression above, you notice that to compare a model with distribution $r$ to one with distribution $q$, you only need the sample averages of the logarithm of $r$ and $q$:
 
-$$\kld(p, q) -\kld(p, r) = \langle log(r) \rangle - \langle log(q) \rangle$$
+$$D_{KL}(p, q) -D_{KL}(p, r) = \langle log(r) \rangle - \langle log(q) \rangle$$
 
 where the angled brackets mean sample average. If we define the deviance:
 
-$$D(q) = -2 \sum_i log(q_i)$$,
+$$D(q) = -2 \sum_i log(q_i)$$
 
 then
 
-$$\kld(p, q) -\kld(p, r) = \frac{2}{N} (D(q) - D(r))$$
+$$D_{KL}(p, q) -D_{KL}(p, r) = \frac{2}{N} (D(q) - D(r))$$
 
 so that we can use the deviance's for model comparison instead. Indeed, this is what we will do, starting in the frequentist realm and moving onto the bayesian realm.
 

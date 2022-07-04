@@ -5,5 +5,5 @@ layout: "default"
 noline: 1
 ---
 
-- [EM](../wiki/emlab.html)
-- [Hierarchicals](../wiki/hierlab.html)
+- [EM](../wiki/emlab.md)
+- [Hierarchicals](../wiki/hierlab.md)

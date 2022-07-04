@@ -12,12 +12,12 @@ noline: 1
 
 ## Notes
 
-- [Markov](../wiki/markov.html)
-- [Metropolis](../wiki/metropolis.html)
-- [Discrete MCMC](../wiki/discretemcmc.html)
-- [Bayes](../wiki/bayes_withsampling.html)
-- [Intro to Gibbs Sampling](../wiki/introgibbs.html)
-- [Hierarchical Models](../wiki/hierarch.html)
+- [Markov](../wiki/markov.md)
+- [Metropolis](../wiki/metropolis.md)
+- [Discrete MCMC](../wiki/discretemcmc.md)
+- [Bayes](../wiki/bayes_withsampling.md)
+- [Intro to Gibbs Sampling](../wiki/introgibbs.md)
+- [Hierarchical Models](../wiki/hierarch.md)
 
 ## Readings
 

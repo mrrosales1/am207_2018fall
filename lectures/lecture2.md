@@ -11,11 +11,11 @@ noline: 1
 
 ## Notes
 
-- [Distributions](../wiki/distributions.html)
-- [Expectations and the Law of Large Numbers](../wiki/Expectations.html)
-- [Sampling and the Central Limit Theorem](../wiki/SamplingCLT.html)
-- [Basic Monte Carlo](../wiki/basicmontercarlo.html)
-- [Integration with Monte Carlo](../wiki/montecarlointegrals.html)
+- [Distributions](../wiki/distributions.md)
+- [Expectations and the Law of Large Numbers](../wiki/Expectations.md)
+- [Sampling and the Central Limit Theorem](../wiki/SamplingCLT.md)
+- [Basic Monte Carlo](../wiki/basicmontercarlo.md)
+- [Integration with Monte Carlo](../wiki/montecarlointegrals.md)
 
 ## Readings
 

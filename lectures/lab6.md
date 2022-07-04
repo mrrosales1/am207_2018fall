@@ -5,5 +5,5 @@ layout: "default"
 noline: 1
 ---
 
-- [Sampling](../wiki/normalusingt.html)
-- [Lin Reg with PyTorch](../wiki/linregpytorch.html)
+- [Sampling](../wiki/normalusingt.md)
+- [Lin Reg with PyTorch](../wiki/linregpytorch.md)

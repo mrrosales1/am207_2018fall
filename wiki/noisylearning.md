@@ -213,10 +213,10 @@ If we find a hypothesis $g$ that minimizes the cost or risk over the training se
 Mathematically, we are saying that:
 
 $$
-\begin{eqnarray*}
+\begin{aligned*}
 A &:& R_{\cal{D}}(g) \,\,smallest\,on\,\cal{H}\\
 B &:& R_{out} (g) \approx R_{\cal{D}}(g)
-\end{eqnarray*}
+\end{aligned*}
 $$
 
 In other words, we hope the **empirical risk estimates the out of sample risk well, and thus the out of sample risk is also small**.
@@ -600,10 +600,10 @@ Define:
 $$\langle  R \rangle = E_{\cal{D}} [R_{out}(\gcald)] =  E_{\cal{D}}E_{p(x)}[(\gcald(x) - f(x) - \epsilon)^2] $$
 
 $$
-\begin{eqnarray*}
+\begin{aligned*}
 =& E_{p(x)}\ecald[(\gcald(x) - f(x) - \epsilon)^2]\\
 =& E_{p(x)}[\ecald[\gcald^2] +  f^2 + \epsilon^2 - 2\,f\,\ecald[\gcald]]
-\end{eqnarray*}
+\end{aligned*}
 $$
 
 Define:
@@ -636,10 +636,10 @@ The process of learning has two parts:
 Mathematically, we are saying that:
 
 $$
-\begin{eqnarray*}
+\begin{aligned*}
 A &:& R_{\cal{D}}(g) \,\,smallest\,on\,\cal{H}\\
 B &:& R_{out} (g) \approx R_{\cal{D}}(g)
-\end{eqnarray*}
+\end{aligned*}
 $$
 
 

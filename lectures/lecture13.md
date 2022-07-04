@@ -11,6 +11,6 @@ noline: 1
 
 ## Notes
 
-- [Supervized to Un-Supervized](../wiki/typesoflearning.html)
-- [Generative vs Discriminative](../wiki/generativemodels.html)
-- [EM](../wiki/EM.html)
+- [Supervized to Un-Supervized](../wiki/typesoflearning.md)
+- [Generative vs Discriminative](../wiki/generativemodels.md)
+- [EM](../wiki/EM.md)

@@ -11,10 +11,10 @@ noline: 1
 
 ## Notes
 
-- [Box's Loop](../wiki/boxloop.html)
-- [Probability](../wiki/probability.html)
-- [Distributions](../wiki/distributions.html)
-- [Distributions Example from Polls](../wiki/distrib-example.html)
+- [Box's Loop](../wiki/boxloop.md)
+- [Probability](../wiki/probability.md)
+- [Distributions](../wiki/distributions.md)
+- [Distributions Example from Polls](../wiki/distrib-example.md)
 
 ## Readings
 

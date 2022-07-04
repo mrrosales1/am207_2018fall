@@ -462,11 +462,11 @@ likelihoodPrecision = 1./(sig*sig)
 We can now continue with the standard Bayesian formalism 
 
 $$
-\begin{eqnarray}
+\begin{aligned}
  p(\bf w| \bf y,X) &\propto& p(\bf y | X, \bf w) \, p(\bf w) \nonumber \\
                        &\propto& \exp{ \left(- \frac{1}{2 \sigma_n^2}(\bf y-X^T \bf w)^T(\bf y - X^T \bf w) \right)}
                         \exp{\left( -\frac{1}{2} \bf w^T \Sigma^{-1} \bf w \right)}  \nonumber \\ 
-\end{eqnarray}
+\end{aligned}
 $$
  
 In the next step we `complete the square' and obtain 
@@ -626,10 +626,10 @@ Oops, what happened here? Our correlations in parameters are huge! But the regre
 Thus the predictive distribution at some $x^{*}$ is given by averaging the output of all possible linear models w.r.t. the  posterior
 
 $$
-\begin{eqnarray} 
+\begin{aligned} 
 p(y^{*} | x^{*}, {\bf x,y}) &=& \int p({\bf y}^{*}| {\bf x}^{*}, {\bf w} ) p(\bf w| X, y)dw \nonumber \\
                                     &=& {\cal N} \left(y \vert \bar{\bf w}^{T}x^{*}, \sigma_n^2 + x^{*^T}A^{-1}x^{*} \right),
-\end{eqnarray}
+\end{aligned}
 $$
 
 

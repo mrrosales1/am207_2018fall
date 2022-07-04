@@ -179,10 +179,10 @@ $$w_1 x_1 + w_2 x_2 + w_0 < 0.$$
 Our classification rule then becomes:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 y = 1 &if& \v{w}\cdot\v{x} \ge 0\\
 y = 0 &if& \v{w}\cdot\v{x} < 0
-\end{eqnarray}
+\end{aligned}
 $$
 
 where $\v{x}$ is the vector $\{1,x_1, x_2,...,x_n\}$ where we have also generalized to more than 2 features.
@@ -215,10 +215,10 @@ $$z = \v{w}\cdot\v{x}.$$
 Then $h(\v{w}\cdot\v{x}) \ge 0.5$ if $\v{w}\cdot\v{x} \ge 0$ and $h(\v{w}\cdot\v{x}) \lt 0.5$ if $\v{w}\cdot\v{x} \lt 0$, and:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 y = 1 &if& h(\v{w}\cdot\v{x}) \ge 0.5\\
 y = 0 &if& h(\v{w}\cdot\v{x}) \lt 0.5.
-\end{eqnarray}
+\end{aligned}
 $$
 
 We said above that if $h > 0.5$ we ought to identify the sample with $y=1$? One way of thinking about this is to identify $h(\v{w}\cdot\v{x})$ with the probability that the sample is a '1' ($y=1$). Then we have the intuitive notion that lets identify a sample as 1 if we find that the probabilty of being a '1' is $\ge 0.5$.
@@ -227,10 +227,10 @@ So suppose we say then that the probability of $y=1$ for a given $\v{x}$ is give
 
 Then, the conditional probabilities of $y=1$ or $y=0$ given a particular sample's features $\v{x}$ are:
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 P(y=1 | \v{x}) &=& h(\v{w}\cdot\v{x}) \\
 P(y=0 | \v{x}) &=& 1 - h(\v{w}\cdot\v{x}).
-\end{eqnarray}$$
+\end{aligned}$$
 
 These two can be written together as
 
@@ -271,9 +271,9 @@ $$\loglike = log \like = log(P(y \mid \v{x},\v{w})).$$
 
 Thus
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 \loglike &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
                   &=& \sum_{y_i \in \cal{D}} log\left(h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\                  
                   &=& \sum_{y_i \in \cal{D}} log\,h(\v{w}\cdot\v{x_i})^{y_i} + log\,\left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\\
                   &=& \sum_{y_i \in \cal{D}} \left ( y_i log(h(\v{w}\cdot\v{x})) + ( 1 - y_i) log(1 - h(\v{w}\cdot\v{x})) \right )
-\end{eqnarray}$$
+\end{aligned}$$

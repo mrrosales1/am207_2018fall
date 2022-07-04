@@ -5,4 +5,4 @@ layout: "default"
 noline: 1
 ---
 
-- [Bootstrap and MLE](../wiki/freq-lab.html)
+- [Bootstrap and MLE](../wiki/freq-lab.md)

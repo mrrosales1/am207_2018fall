@@ -11,11 +11,11 @@ noline: 1
 
 ## Notes
 
-- [Expectations and the Law of Large Numbers](../wiki/Expectations.html)
-- [Sampling and the Central Limit Theorem](../wiki/SamplingCLT.html)
-- [Basic Monte Carlo](../wiki/basicmontercarlo.html)
-- [Integration with Monte Carlo](../wiki/montecarlointegrals.html)
-- [Frequentist Statistics](../wiki/frequentist.html)
-- [Maximum Likelihood Estimation](../wiki/MLE.html)
+- [Expectations and the Law of Large Numbers](../wiki/Expectations.md)
+- [Sampling and the Central Limit Theorem](../wiki/SamplingCLT.md)
+- [Basic Monte Carlo](../wiki/basicmontercarlo.md)
+- [Integration with Monte Carlo](../wiki/montecarlointegrals.md)
+- [Frequentist Statistics](../wiki/frequentist.md)
+- [Maximum Likelihood Estimation](../wiki/MLE.md)
 
 ## Readings

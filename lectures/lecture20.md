@@ -11,11 +11,11 @@ noline: 1
 
 ## Notes
 
-- [Kung San Weights from Normal model to regression](../wiki/normalreg.html)
-- [Kung San in pymc](../wiki/pymcnormalreg.html)
-- [Normal-Normal Hierarchical Model](../wiki/gelmanschools.html)
-- [Poisson GLM](../wiki/Islands1.html)
-- [Priors](../wiki/priors.html)
+- [Kung San Weights from Normal model to regression](../wiki/normalreg.md)
+- [Kung San in pymc](../wiki/pymcnormalreg.md)
+- [Normal-Normal Hierarchical Model](../wiki/gelmanschools.md)
+- [Poisson GLM](../wiki/Islands1.md)
+- [Priors](../wiki/priors.md)
 
 ## Readings
 

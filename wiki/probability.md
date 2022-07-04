@@ -201,10 +201,10 @@ We can have a HH, HT, TH, or TT. In three out of 4 of these cases, either the fi
 
 The formula says, add the odds that "the first toss was a heads, without worrying about the second one (1/2), to the probability that the second toss was a heads, without worrying about the first one" (1/2). Since this double counts the situation where both are heads; subtract that (1/4):
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 P(E+F) \, & = &\, P(E) + P(F) - P(EF)\\
 \frac{3}{4} \, & = &\, \frac{1}{2} + \frac{1}{2} - \frac{1}{4} 
-\end{eqnarray}$$
+\end{aligned}$$
 
 Armed with these two formulas, we can tackle the world of conditional and marginal probabilities, and Bayes theorem!
 

@@ -11,15 +11,15 @@ noline: 1
 
 ## Notes
 
-- [First part of Bayes notebook](../wiki/bayes_withsampling.html)
-- [Bernoulli/Binomial Models like coins and globe tosses](../wiki/globemodel.html)
-- [Globe Model Lab](../wiki/globemodellab.html)
-- [Normal Model](../wiki/normalmodel.html)
-- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.html)
-- [Checking a Model](../wiki/lightspeed.html)
-- [Inverse Transform for sampling](../wiki/inversetransform.html)
-- [Rejection Sampling](../wiki/rejectionsampling.html)
-- [Importance Sampling](../wiki/importancesampling.html)
+- [First part of Bayes notebook](../wiki/bayes_withsampling.md)
+- [Bernoulli/Binomial Models like coins and globe tosses](../wiki/globemodel.md)
+- [Globe Model Lab](../wiki/globemodellab.md)
+- [Normal Model](../wiki/normalmodel.md)
+- [Sufficient Statistics, Exchangeability, and Poisson](../wiki/sufstatexch.md)
+- [Checking a Model](../wiki/speedoflight.md)
+- [Inverse Transform for sampling](../wiki/inversetransform.md)
+- [Rejection Sampling](../wiki/rejectionsampling.md)
+- [Importance Sampling](../wiki/importancesampling.md)
 
 ## Readings
 

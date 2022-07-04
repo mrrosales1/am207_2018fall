@@ -163,10 +163,10 @@ With a quadratic in $p$ and if $V(q) = \frac{1}{2}q^2$ our distribution is gauss
 The game now is to sample from this two-N-dimensional distribution and marginalize over the momenta to get the distribution from the $q$. To carry out this sampling, we'll use the physics equations of motion in the **Hamiltonian Formalism** (thus leading to the name Hamiltonian Monte Carlo) to "glide" over a level set.   Given a Hamiltonian H, the Hamiltonian equations of motion are as follows:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 \frac{dp}{dt}  &=& -\frac {\partial H}{\partial q} \\
 \frac{dq}{dt}  &=& \frac {\partial H}{\partial p} 
-\end{eqnarray}
+\end{aligned}
 $$
 
 If we have
@@ -242,20 +242,20 @@ This time independence is crucial to reversibility: we cannot pick a direction o
 Consider a transformation $T_s$ from $(q,p) \to (q',p')$ where the primed quantities are just the variables at a "later" time $t' = t + s$. This mapping is 1-1 and thus has an inverse $T_{-s}$. This can be obtained by simply negating time in Hamilton's equations:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 \frac{dp}{d(-t)}  &=& -\frac {\partial H}{\partial q} \\
 \frac{dq}{d(-t)}  &=& \frac {\partial H}{\partial p} 
-\end{eqnarray}
+\end{aligned}
 $$
 
 This changes the equations of motion and would not be kosher, but we can
 preserve the equation, by merely transforming $p \to -p$ and then 
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 \frac{d(-p)}{d(-t)}  &=& -\frac {\partial H}{\partial q} \\
 \frac{dq}{d(-t)}  &=& \frac {\partial H}{\partial (-p)} 
-\end{eqnarray}
+\end{aligned}
 $$
 
 and we have the old equations back. Notice that the momentum transformation does not change the Hamiltonian as long as the kinetic energy is symmetric in $p$.

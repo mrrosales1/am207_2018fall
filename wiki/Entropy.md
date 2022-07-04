@@ -106,14 +106,16 @@ $$ W =  \frac{N!}{\prod_{i} n_i!} $$
 
 is called the multiplicity and the entropy is then defined as:
 
-$$H = \frac{1}{N} log(W)$$ which is:
+$$H = \frac{1}{N} log(W)$$
+
+which is:
 
 $$\frac{1}{N}log(P(n_i, n_2, ...,n_M))$$
 
 with a constant term removed.
 
 
-$$H = \frac{1}{N} log(N!) - \frac{1}{N} \sum_i log(n_i!)$$.
+$$H = \frac{1}{N} log(N!) - \frac{1}{N} \sum_i log(n_i!)$$
 
 Using Stirling's approximation $log(N!) \sim Nlog(N) -N$ as $N \to \infty$ and where the fractions $n_i/N$ are held fixed:
 
@@ -159,8 +161,6 @@ This is a plot from McElreath of a bunch of generalized normal distributions. wi
 
 If you think about entropy increasing as we make a distribution flatter, you realize that the shape must come about because finite and equal variance puts a limit on how wide the distribution can be.
 
-$$\renewcommand{kld}{D_{KL}}$$
-
 For a gaussian
 
 $$p(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-(x - \mu)^2/2\sigma^2}$$
@@ -171,20 +171,19 @@ $$ =  -\frac{1}{2}log(2\pi\sigma^2) - \frac{1}{2\sigma^2}E_p[(x - \mu)^2] = -\fr
 
 No other distribution $q$ can have higher entropy than this, provided they share the same variance and mean.
 
-To see this consider (note change in order, we are considering $\kld(q, p)$:
+To see this consider (note change in order, we are considering $D_{KL}(q, p)$:
 
-$$\kld(q, p) = E_q[log(q/p)] = H(q,p) - H(q)$$
+$$D_{KL}(q, p) = E_q[log(q/p)] = H(q,p) - H(q)$$
 
 $$H(q,p) = E_q[log(p)] = E_q[-\frac{1}{2}log(2\pi\sigma^2) - (x - \mu)^2/2\sigma^2] \\= -\frac{1}{2}log(2\pi\sigma^2) - \frac{1}{2\sigma^2}E_q[(x - \mu)^2]$$
 
-The second expectation here is the variance $\s
-igma^2$ on the assumption that $E_q[x] = \mu$.
+The second expectation here is the variance $sigma^2$ on the assumption that $E_q[x] = \mu$.
 
 Thus
 
 $$H(q,p) =  -\frac{1}{2}log(2\pi\sigma^2) - \frac{1}{2} =  -\frac{1}{2}log(2\pi e \sigma^2) = H(p)$$
 
-Now as we have shown $\kld(q,p) >=0$. This means that  $H(q,p) - H(q) >= 0$. Which then means that $H(p) - H(q) >= 0$ or $H(p) >= H(q)$. This means that the Gaussian has the highest entropy of any distribution with the same mean and variance.
+Now as we have shown $D_{KL}(q,p) >=0$. This means that  $H(q,p) - H(q) >= 0$. Which then means that $H(p) - H(q) >= 0$ or $H(p) >= H(q)$. This means that the Gaussian has the highest entropy of any distribution with the same mean and variance.
 
 See http://www.math.uconn.edu/~kconrad/blurbs/analysis/entropypost.pdf for details on maxent for distributions.
 
@@ -224,12 +223,12 @@ Where $Z(\theta)$, also called the partition function, is the normalization.
 For example, the univariate Gaussian Distribution can be obtained with:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 \theta &=& \begin{pmatrix}\mu/\sigma^2 \\-1/2\sigma^2\end{pmatrix}\\
 \phi(x) &=&  \begin{pmatrix}x \\x^2\end{pmatrix}\\
 Z(\mu, \sigma^2) &=& \sigma\sqrt{2\pi} e^{\mu^2/2\sigma^2}\\
 h(x) &=& 1
-\end{eqnarray}
+\end{aligned}
 $$
 
 Each member of the exponential family turns out to be a maximum entropy distribution subject to different constraints. These distributions are then used as likelihoods. 

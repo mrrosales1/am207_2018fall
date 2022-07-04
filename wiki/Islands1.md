@@ -325,14 +325,14 @@ Lets write down the model we plan to fit.
 ### M1
 
 $$
-\begin{eqnarray}
+\begin{aligned}
 T_i & \sim & Poisson(\lambda_i)\\
 log(\lambda_i) & = & \alpha + \beta_P log(P_i) + \beta_C C_i + \beta_{PC} C_i log(P_i)\\
 \alpha & \sim & N(0,100)\\
 \beta_P & \sim & N(0,1)\\
 \beta_C & \sim & N(0,1)\\
 \beta_{PC} & \sim & N(0,1)
-\end{eqnarray}
+\end{aligned}
 $$
 
 The $\beta$s have strongly regularizing priors on them, because the sample is small, while the $\alpha$ prior is essentially a flat prior.

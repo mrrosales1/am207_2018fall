@@ -11,13 +11,13 @@ noline: 1
 
 ## Notes
 
-- [Backpropagation for Logistic Regression](../wiki/LogisticBP.html)
-- [Regression in Torch](../wiki/FuncTorch.html)
-- [Playing with regression and Universal Approximation](../wiki/nnreg.html)
-- [Multi Layer Perceptron for Classification](../wiki/MLP_Classification.html)
-- [Supervized to Un-Supervized](../wiki/typesoflearning.html)
-- [Generative vs Discriminative](../wiki/generativemodels.html)
-- [Decisions](../wiki/utilityorrisk.html)
+- [Backpropagation for Logistic Regression](../wiki/LogisticBP.md)
+- [Regression in Torch](../wiki/FuncTorch.md)
+- [Playing with regression and Universal Approximation](../wiki/nnreg.md)
+- [Multi Layer Perceptron for Classification](../wiki/MLP_Classification.md)
+- [Supervized to Un-Supervized](../wiki/typesoflearning.md)
+- [Generative vs Discriminative](../wiki/generativemodels.md)
+- [Decisions](../wiki/utilityorrisk.md)
 
 ## Readings and Videos
 

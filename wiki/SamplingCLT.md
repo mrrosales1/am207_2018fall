@@ -126,10 +126,10 @@ $$E_{\{R\}}(N\,\bar{x}) = E_{\{R\}}(x_1 + x_2 + ... + x_N) = E_{\{R\}}(x_1) + E_
 
 Now in the limit of a very large number of replications, each of the expectations in the right hand side can be replaced by the population mean using the law of large numbers! Thus:
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 E_{\{R\}}(N\,\bar{x}) &=& N\, \mu\\
 E_{\{R\}}(\bar{x}) &=& \mu
-\end{eqnarray}$$
+\end{aligned}$$
 
 which tells us that in the limit of a large number of replications the expectation value of the sampling means converges to the population mean. This limit gives us the true sampling distribution, as opposed to what we might estimate from our finite set of replicates. (Thus there our $E_{\{R\}}$ would be replaced by  some $E_{fs}$ where by $fs$ we wish to indicate the pmf or density of the sampling distribution).
 
@@ -188,10 +188,10 @@ $$V_{\{R\}}(N\,\bar{x}) = V_{\{R\}}(x_1 + x_2 + ... + x_N) = V_{\{R\}}(x_1) + V_
 
 Now in the limit of a very large number of replications, each of the variances in the right hand side can be replaced by the population variance using the law of large numbers! Thus:
 
-$$\begin{eqnarray}
+$$\begin{aligned}
 V_{\{R\}}(N\,\bar{x}) &=& N\, \sigma^2\\
 V(\bar{x}) &=& \frac{\sigma^2}{N}
-\end{eqnarray}$$
+\end{aligned}$$
 
 This simple formula is called **De-Moivre's** formula, and explains the tell-tale triangular plot we saw above, with lots of variation at low sample sizes turning into a tight distribution at large sample size(N).
 

@@ -34,13 +34,13 @@ The likelihood gives us a measure of how likely it is to observe values $D={d_1,
 
 Assumming iid, the likelihood  is
 
-$$L=\Lik = \prod_{i=1}^{n} p(d_i \vert \theta)$$
+$$L=\mathcal{L} = \prod_{i=1}^{n} p(d_i \vert \theta)$$
 
 How likely are the observations if the model is true?
 
 This corresponds to maximizing the likelihood as a function of $\theta$ for a given set of observations. 
 
-$$ \theta_{ML} = \arg \! \max_{\theta} \Lik $$
+$$ \theta_{ML} = \arg \! \max_{\theta} \mathcal{L} $$
 
 Notice that this method wants to account for every point in the "training set". So it overfits.
 
@@ -85,7 +85,7 @@ $$p(\theta_1 \vert D) = \int d\theta_{-1} p(\theta \vert D).$$
 
 Remember though at the end of the day, we care about how we are going to make predictions on future data, and not the values of the parameters. Thus what we wish to find is the distribution of a future data point $y^*$, also known as the posterior predictive distribution:
 
-$$p(y^* \vert D=\{y\}) = \int d\theta p(y^* \vert \theta)p(\theta \vert \{y\})$$.
+$$p(y^* \vert D=\{y\}) = \int d\theta p(y^* \vert \theta)p(\theta \vert \{y\})$$
 
 If you like, this is the average of the likelihood at a new point(s)  $E_{p(\theta \vert D)}[p(y \vert \theta)]$.
 
@@ -104,11 +104,11 @@ parameters given the data. In other words, we find the mode of the posterior dis
 This corresponds to:
 
 $$
-\begin{eqnarray}
+\begin{aligned}
  \theta_{{\rm MAP}} &=& \arg \max_{\theta} \, p(\theta \vert D)  \nonumber \\ 
-                               & =& \arg \max_{\theta}  \frac{\Lik \, p(\theta)}{p(D)}  \nonumber \\ 
-                               & =& \arg \max_{\theta}  \, \Lik \, p(\theta) \nonumber \\ 
-\end{eqnarray}
+                               & =& \arg \max_{\theta}  \frac{\mathcal{L} \, p(\theta)}{p(D)}  \nonumber \\ 
+                               & =& \arg \max_{\theta}  \, \mathcal{L} \, p(\theta) \nonumber \\ 
+\end{aligned}
 $$
 
 This looks similar to the maximum likelihood estimation procedure. The difference is that

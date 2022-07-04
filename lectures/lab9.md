@@ -5,6 +5,6 @@ layout: "default"
 noline: 1
 ---
 
-- [Convergence and Coverage](../wiki/convergenceandcoverage.html)
-- [Normal Model with pymc3](../wiki/normalmodelwithpymc.html)
-- [Tumors](../wiki/tumorlab.html)
+- [Convergence and Coverage](../wiki/convergenceandcoverage.md)
+- [Normal Model with pymc3](../wiki/normalmodelwithpymc.md)
+- [Tumors](../wiki/tumorlab.md)
