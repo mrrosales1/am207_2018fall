@@ -15,16 +15,16 @@ layout: wiki
 {: toc}
 
 
-$$
-\renewcommand{\like}{\cal L}
-\renewcommand{\loglike}{\ell}
-\renewcommand{\err}{\cal E}
-\renewcommand{\dat}{\cal D}
-\renewcommand{\hyp}{\cal H}
+<!-- $$
+\renewcommand{\cal L}{\cal L}
+\renewcommand{\ell}{\ell}
+\renewcommand{\cal E}{\cal E}
+\renewcommand{\cal D}{\cal D}
+\renewcommand{\cal H}{\cal H}
 \renewcommand{\Ex}[2]{E_{#1}[#2]}
 \renewcommand{\x}{\mathbf x}
 \renewcommand{\v}[1]{\mathbf #1}
-$$
+$$ -->
 
 
 
@@ -85,8 +85,7 @@ def plotSampleLines(mu, sigma, numberOfLines, dataPoints=None, ax=None):
 
 ## The Bayesian formulation of regression
 
-Let us say we have data $D$, of $n$ observations  
-$D=\left\{ ({\bf x}_1, y_1), ({\bf x}_2,y_2), \ldots, ({\bf x}_n, y_n) \right\} $ where ${\bf x}$ 
+Let us say we have data $D$, of $n$ observations $D=\left\{ ({\bf x}_1, y_1), ({\bf x}_2,y_2), \ldots, ({\bf x}_n, y_n) \right\}$ where ${\bf x}$ 
 denotes an input vector of dimension $D$ and $y$ denotes a scalar output (dependent variable). 
 All data points are combined into a $D \times n$ matrix $X$. 
 The model that determines the relationship between inputs and 
@@ -134,7 +133,7 @@ plt.scatter(x,y)
 The likelihood is, because we assume independency, the product 
 
 $$
-\begin{aligned} \like &=& p(\bf y|X,\bf w) = \prod_{i=1}^{n} p(y_i|\bf X_i, \bf w) =   \prod_{i=1}^{n}  \frac{1}{\sqrt{2\pi}\sigma_n}
+\begin{aligned} \cal L &=& p(\bf y|X,\bf w) = \prod_{i=1}^{n} p(y_i|\bf X_i, \bf w) =   \prod_{i=1}^{n}  \frac{1}{\sqrt{2\pi}\sigma_n}
    \exp{ \left( -\frac{(y_i-\bf X_i^T \bf w)^2}{2\sigma_n^2} \right)}  \nonumber \\ 
    &\propto &  \exp{\left( -\frac{| \bf y-X^T \bf w|^2 }{2\sigma_n^2} \right)} \propto N(X^T \bf w,  \sigma_n^2 I)
 \end{aligned}
@@ -219,9 +218,11 @@ $$
  
 In the next step we `complete the square' and obtain 
 
+$$
 \begin{equation}
 p(\bf w| \bf y,X)  \propto  \exp \left( -\frac{1}{2} (\bf w - \bar{\bf w})^T  (\frac{1}{\sigma_n^2} X X^T + \Sigma^{-1})(\bf w - \bar{\bf w} )  \right)
 \end{equation}
+$$
 
 This is a Gaussian with inverse-covariance
 

@@ -74,7 +74,7 @@ $$\sigma_j^2 = \sigma^2/n_j$$
 
 $$\bar{y_j} \vert \theta_j \sim N(\theta_j,\sigma_j^2).$$
 
-Since we are assuming the variance $\sigma^2$ is known from all the schools we have $$\sigma_j^2 = \sigma^2/n_j$$ to be the standard error of the sample-mean.
+Since we are assuming the variance $\sigma^2$ is known from all the schools we have $\sigma_j^2 = \sigma^2/n_j$ to be the standard error of the sample-mean.
 
 The idea is that if a particular school is very likely to have systematically positive treatment effect, we should be able to estimate that $\theta_j$ is relatively large and $\sigma_j^2$ is relatively small. If on the other hand, a school giving both positive and negative treatments we'll estimate $\theta_j$ around 0 and a relatively large variance $\sigma_j^2$.
 

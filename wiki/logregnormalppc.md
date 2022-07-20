@@ -146,7 +146,7 @@ Similarly we could represent the probability that the output is 0 given the inpu
 
 $$P(y=0 \mid x) =  h_0\left(w_0 + w_1 x_1 + \;...\; + w_d x_d\right) = h_0\left(\sum_{i=0}^d w_i x_i\right) = h_0\left({\bf w} \cdot {\bf x}\right) = h_0\left({\bf w}^T {\bf x}\right)$$
 
-As we only have two classes, by the laws of probability $P(y=1 \mid x)$ = 1 - $P(y=0 \mid x)$.  This implies that $h_1\left({\bf w} \cdot {\bf x}\right) = 1 - h_1\left({\bf w} \cdot {\bf x}\right) $ and we can represent our equations with just the function $h$.
+As we only have two classes, by the laws of probability $P(y=1 \mid x)$ = 1 - $P(y=0 \mid x)$.  This implies that $h_1\left({\bf w} \cdot {\bf x}\right) = 1 - h_1\left({\bf w} \cdot {\bf x}\right)$ and we can represent our equations with just the function $h$.
 
 $$\begin{aligned}
 P(y=1 \mid \v{x}) &=& h(\v{w}\cdot\v{x}) \\
@@ -277,7 +277,7 @@ $$P(y|\v{x},\v{w}) = P(\{y_i\} | \{\v{x}_i\}, \v{w}) = \prod_{y_i \in \cal{D}} P
 
 Why use probabilities? Earlier, we talked about how the regression function $f(x)$ never gives us the $y$ exactly, because of noise. This hold for classification too. Even with identical features, a different sample may be classified differently. 
 
-We said that another way to think about a noisy $y$ is to imagine that our data $\dat$ was generated from  a joint probability distribution $P(x,y)$. Thus we need to model $y$ at a given $x$, written as $P(y \mid x)$, and since $P(x)$ is also a probability distribution, we have:
+We said that another way to think about a noisy $y$ is to imagine that our data $\cal D$ was generated from  a joint probability distribution $P(x,y)$. Thus we need to model $y$ at a given $x$, written as $P(y \mid x)$, and since $P(x)$ is also a probability distribution, we have:
 
 $$P(x,y) = P(y \mid x) P(x) ,$$
 
@@ -289,25 +289,25 @@ Thus its desirable to have probabilistic, or at the very least, ranked models of
 
 
 
-Now if we maximize $$P(y \mid \v{x},\v{w})$$ we will maximize the chance that each point is classified correctly, which is what we want to do. This is a principled way of obtaining the highest probability classification. This **maximum likelihood** estimation maximises the **likelihood of the sample y**, 
+Now if we maximize $P(y \mid \v{x},\v{w})$ we will maximize the chance that each point is classified correctly, which is what we want to do. This is a principled way of obtaining the highest probability classification. This **maximum likelihood** estimation maximises the **likelihood of the sample y**, 
 
-$$\like = P(y \mid \v{x},\v{w}).$$ 
+$$\cal L = P(y \mid \v{x},\v{w}).$$ 
 
 
 Again, we can equivalently maximize 
 
-$$\loglike = log(P(y \mid \v{x},\v{w}))$$ 
+$$\ell = log(P(y \mid \v{x},\v{w}))$$ 
 
 since the natural logarithm $log$ is a monotonic function. This is known as maximizing the **log-likelihood**.
 
 
-$$\loglike = log \like = log(P(y \mid \v{x},\v{w})).$$
+$$\ell = log \cal L = log(P(y \mid \v{x},\v{w})).$$
 
 
 Thus
 
 $$\begin{aligned}
-\loglike &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
+\ell &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
                   &=& \sum_{y_i \in \cal{D}} log\left(h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\                  
                   &=& \sum_{y_i \in \cal{D}} log\,h(\v{w}\cdot\v{x_i})^{y_i} + log\,\left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\\
                   &=& \sum_{y_i \in \cal{D}} \left ( y_i log(h(\v{w}\cdot\v{x_i})) + ( 1 - y_i) log(1 - h(\v{w}\cdot\v{x_i})) \right )
@@ -338,7 +338,7 @@ We constructed earlier the likelihood -- and thus derived formulations for $P(y|
 
 **Our likelihood:**
 
-$$P(y|\v{x}, \v{w}) = $$P(\v{w}|\v{x}, \v{y}) \propto P(y|\v{x}, \v{w}) \cdot P(\v{w_j})$$$$
+$$P(y|\v{x}, \v{w}) = P(\v{w}|\v{x}, \v{y}) \propto P(y|\v{x}, \v{w}) \cdot P(\v{w_j})$$
 
 **Our priors:**
 
@@ -374,7 +374,7 @@ p(y_1, \ldots, y_n \vert \mu, \sigma^2) =
 \frac{1}{ \sqrt{ 2 \pi \sigma^2}}   \exp \left\{  - \frac{1}{2}  \sum_i \frac{(y_i-\mu)^2}{\sigma^2} \right\} 
 $$
 
-The conjugate prior for a normal is also a normal which we can write as $$N(\mu | \mu_0, \sigma_0) = \frac{1}{ \sqrt{ 2 \pi \sigma_0^2}} \exp \left\{-\frac{(\mu-\mu_0)^2}{\sigma_0^2} \right\} $$
+The conjugate prior for a normal is also a normal which we can write as $N(\mu | \mu_0, \sigma_0) = \frac{1}{ \sqrt{ 2 \pi \sigma_0^2}} \exp \left\{-\frac{(\mu-\mu_0)^2}{\sigma_0^2} \right\}$
 
 We can now write the posterior for this model thus:
 

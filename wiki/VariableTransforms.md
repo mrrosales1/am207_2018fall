@@ -125,7 +125,7 @@ $$dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\t
 
 $$dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta$$
 
-Then the infinitessimal areas transform via the determinant of the partials of this transform, or the determinantJacobian $J$, which can be written:
+Then the infinitessimal areas transform via the determinant of the partials of this transform, or the determinant Jacobian $J$, which can be written:
 
 $$ J =  \binom{\frac{\partial x}{\partial r}\:\frac{\partial x}{\partial \theta}}{\frac{\partial y}{\partial r}\:\frac{\partial y}{\partial \theta}}$$
 
@@ -163,6 +163,6 @@ $$det(J) = r$$
 
 $$f_{R, \Theta}(r, \theta) = f_{X,Y}(r cos(\theta), r sin(\theta)) \times r $$
 
-$$=  \frac{1}{\sqrt{2\pi}} e^{-(r cos(\theta))^2/2} \times \frac{1}{\sqrt{2\pi}} e^{-(r sin(\theta))^2/2} = \frac{1}{2\pi} \times e^{-r^2/2} \times r$$.
+$$=  \frac{1}{\sqrt{2\pi}} e^{-(r cos(\theta))^2/2} \times \frac{1}{\sqrt{2\pi}} e^{-(r sin(\theta))^2/2} = \frac{1}{2\pi} \times e^{-r^2/2} \times r$$
 
 which is a Raleigh distribution.

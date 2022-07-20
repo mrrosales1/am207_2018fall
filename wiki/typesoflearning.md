@@ -31,7 +31,6 @@ from IPython.display import Image
 
 
 $$\newcommand{\isum}{\sum_{i}}$$
-$$\newcommand{\zsum}{\sum_{k=1}^{K}}$$
 $$\newcommand{\zsumi}{\sum_{\{z_i\}}}$$
 
 ## Mixture models
@@ -44,7 +43,7 @@ An example of a hidden model is the mixture model. A distribution $p(x \vert \{\
 
 $$p(x \vert \{\theta_{k}\}) = \sum_k \lambda_k p_{k}(x \vert \theta_k)$$
 
-with the $\lambda_k$ being mixing weights, $\lambda_k > 0$, $\zsum \lambda_k = 1$.
+with the $\lambda_k$ being mixing weights, $\lambda_k > 0$, $\sum_{k=1}^{K} \lambda_k = 1$.
 
 The $p_k$'s can be completely arbitrary, but we usually assume they are from the same family, like Gaussians with different centers and variances, or Poissons with different means.
 
@@ -107,7 +106,7 @@ multinomial.rvs(1,[0.6,0.1, 0.3], size=10)
 
 The Gaussian mixture model or GMM is the most widely used mixture distribution. In this model, each base distribution  is a multivariate Gaussian with mean $\mu_k$ and covariance matrix $\Sigma_k$. Thus the model has the form
 
-$$p(x \vert  \{\theta_{k}\}) = \zsum \lambda_k N(x \vert \mu_k , \Sigma_k ) $$
+$$p(x \vert  \{\theta_{k}\}) = \sum_{k=1}^{K} \lambda_k N(x \vert \mu_k , \Sigma_k ) $$
 
 Thus each mixture component can be thought of as represented by a different set of eliptical contours, and we add these to create our overall density.
 

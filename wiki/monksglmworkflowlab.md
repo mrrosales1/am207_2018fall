@@ -58,7 +58,7 @@ The likelihood of observing 0 manuscripts produced is is:
 
  $$\cal{L}(y=0) = p + (1-p) e^{-\lambda},$$
 
-since the Poisson likelihood of $y$ is $ \lambda^y exp(–\lambda)/y!$
+since the Poisson likelihood of $y$ is $\lambda^y exp(–\lambda)/y!$
 
 Likelihood of a non-zero $y$ is:
 

@@ -1220,7 +1220,7 @@ invlogit(0.04), invlogit(0.04+0.61), invlogit(0.04+0.61-0.1)
 
 ## Posteriors and Posterior predictives
 
-First we create a trace function that takes into account the fact that we are using "nested" models, and that the full trace for $$logit(p)$$ can be obtained by setting some coefficients to 0
+First we create a trace function that takes into account the fact that we are using "nested" models, and that the full trace for $logit(p)$ can be obtained by setting some coefficients to 0
 
 
 

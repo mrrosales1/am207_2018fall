@@ -300,7 +300,7 @@ As a rule of thumb, the CLT starts holding at $N \sim 30$.
 
 The sample mean, or mean of the random variables $x_{mi}$ in the sample $m$, has a sampling distribution with mean $\mu$ and variance $\frac{\sigma^2}{N}$, as shown before. Now for large sample sizes we can go further and use the CLT theorem to say that this distribution is the normal distribution,
 
-$$S_N \sim N(\mu, \frac{\sigma^2}{N})$$.
+$$S_N \sim N(\mu, \frac{\sigma^2}{N})$$
 
 The preciseness of saying that we have a gaussian is a huge gain in our expository power. For example, for the case of the weight-watchers program above, a separation of 20lbs is more than 3 standard errors away, which corresponds to being way in the tail of a gaussian distribution. Because we can now quantify the area under the curve, we can say that 99.7\% of the sample means lie within 9lbs of 150. Thus you can way easily reject the possibility that the new sample is from the weight-watchers program with 99.7\% confidence. 
 
@@ -347,7 +347,7 @@ $$E_{\{R\}}(N\,V_m) = E_{\{R\}}(\sum_{i=1}^{N}(x_{mi} - \mu)^2) - E_{\{R\}}(N\,(
 In the asymptotic limit of a very large number of replicates, we can then write
 $$E(N\,V) = N\,\sigma^2 - \sigma^2, $$
 and thus we have
-$$E(V) = \frac{N-1}{N} \,\sigma^2$$.
+$$E(V) = \frac{N-1}{N} \,\sigma^2$$
 
 In other words, the expected value of the sample variance is LESS than the actual variance. This should not be surprising: consider for example a sample of size 1 from the population. There is zero variance! More generally, whenever you sample a population, you tend to pick the more likely members of the population, and so the variance in the sample is less than the variance in the population.
 

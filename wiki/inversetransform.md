@@ -33,7 +33,7 @@ print("Setup Finished")
 
 The basic idea behind the inverse transform method is to transform uniform samples into samples from a different distribution. That is, by somehow drawing from a uniform distribution, we make it possible to draw from the other distribution in question.
 
-At first glance this seems to be a quixotic quest, but the key observation is this: the CDF of a distribution  is a function that ranges from  0 to 1. Now assume you  use $$Uniform(0,1)$$ to generate a random number, say 0.63. Now map this number on the range (or y-axis) to a x using the CDF curve to generate a sample. This process is illustrated below:
+At first glance this seems to be a quixotic quest, but the key observation is this: the CDF of a distribution  is a function that ranges from  0 to 1. Now assume you  use $Uniform(0,1)$ to generate a random number, say 0.63. Now map this number on the range (or y-axis) to a x using the CDF curve to generate a sample. This process is illustrated below:
 
 ![](images/invtrans.png)
 
@@ -55,7 +55,7 @@ Why does this work?
 
 First note that:
 
-$F^{-1}(u) = $ smallest x such that $F(x) >=u$
+$F^{-1}(u) =$ smallest x such that $F(x) >=u$
 
 What distribution does random variable $y = F^{-1}(u)$ follow?
 
@@ -145,7 +145,8 @@ plt.legend()
 In many cases the integral to calculate the CDF may not be easy to calculate analytically
 and we need to come with clever algorithms. For example 
 there is no closed form formula for the integral of the normal distribution
-$ I=\frac{1}{2\pi} \int_{-\infty}^{x} e^{-x'^2/2}dx' $.
+$I=\frac{1}{2\pi} \int_{-\infty}^{x} e^{-x'^2/2}dx'$
+
 
 The Box Muller method is a brilliant trick to overcome this by producing two independent standard normals
 from two independent uniforms. 
@@ -194,7 +195,7 @@ $$\int dx dy f(x,y) = \int dr d\theta f2(r, \theta) = \int dr d\theta f2r(r)\, f
 
 And we have seen:
 
-fpolar(\theta) =Unif(0, 2\pi)
+$fpolar(\theta) =Unif(0, 2\pi)$
 
 We might be tempted to think that $f2r(r) = e^{-r^2/2}$. But this is not correct on two counts. First, its not even dimensionally right. Secondly, then you transform the $dxdy$ to polar , you get $rdrd\theta$.
 
@@ -218,4 +219,4 @@ $$ J =  \binom{cos(\theta)\:sin(\theta)}{-r sin(\theta)\:r cos(\theta)}$$
 
 whose determinant is  $r$,  and thus
 
-$$f_{R, \Theta}(r, \theta) = f_{X,Y}(r cos(\theta), r sin(\theta)) \times r =  \frac{1}{\sqrt{2\pi}} e^{-(r cos(\theta))^2/2} \times \frac{1}{\sqrt{2\pi}} e^{-(r sin(\theta))^2/2} = \frac{1}{2\pi} \times e^{-r^2/2} \times r$$.
+$$f_{R, \Theta}(r, \theta) = f_{X,Y}(r cos(\theta), r sin(\theta)) \times r =  \frac{1}{\sqrt{2\pi}} e^{-(r cos(\theta))^2/2} \times \frac{1}{\sqrt{2\pi}} e^{-(r sin(\theta))^2/2} = \frac{1}{2\pi} \times e^{-r^2/2} \times r$$

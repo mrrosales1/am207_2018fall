@@ -105,7 +105,7 @@ $$s(x) T(y \vert x) = s(y) T(x \vert y)$$
 
 If one sums both sides over $x$
 
-$$\int dx s(x) t(y \vert x) = s(y) \int dx T(x \vert y)$$ which gives us back the stationarity condition from above.
+$\int dx s(x) t(y \vert x) = s(y) \int dx T(x \vert y)$ which gives us back the stationarity condition from above.
 
 Thus we want to design us samplers which  satisfy detailed balance.
 
@@ -164,7 +164,7 @@ for i in range(5):
     -----------------
 
 
-The stationary distribution can be solved for. Assume that it is $$s = [p, 1-p]$$.  Then:
+The stationary distribution can be solved for. Assume that it is $s = [p, 1-p]$.  Then:
 
 $$sT = s$$
 
@@ -240,7 +240,7 @@ $$A(x_i, x_{i-1}) = min(1,  \frac{s(x_i)}{s(x_{i-1})})$$
 
 is the Metropolis acceptance probability (you propose the move and accept it) and 
 
-$$r(x_i) = \int dy q(y \vert x_i)(1 - A(y, x_i))$$ is the rejection term. In the event you dont move, this could have happened 2 ways: (a) you proposed to move to the same position and accepted it, or you proposes moves aevrywhere else but dont accept any of those proposals and stay where you are.
+$r(x_i) = \int dy q(y \vert x_i)(1 - A(y, x_i))$ is the rejection term. In the event you dont move, this could have happened 2 ways: (a) you proposed to move to the same position and accepted it, or you proposes moves aevrywhere else but dont accept any of those proposals and stay where you are.
 
 Lets parse the term above:
 

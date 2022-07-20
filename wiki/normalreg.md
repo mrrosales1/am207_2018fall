@@ -471,9 +471,11 @@ $$
  
 In the next step we `complete the square' and obtain 
 
+$$
 \begin{equation}
 p(\bf w| \bf y,X)  \propto  \exp \left( -\frac{1}{2} (\bf w - \bar{\bf w})^T  (\frac{1}{\sigma_n^2} X X^T + \Sigma^{-1})(\bf w - \bar{\bf w} )  \right)
 \end{equation}
+$$
 
 This is a Gaussian with inverse-covariance
 

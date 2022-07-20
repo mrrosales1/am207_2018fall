@@ -387,7 +387,7 @@ The **survival function** $S(t)$ of a population is defined as:
 
 $$S(t) = P(T > t), $$
 
-the probability of surviving past time t. The function $S$ is 1 minus the CDF of T, or $$S(t) = 1 - CDF_T(t)$$
+the probability of surviving past time t. The function $S$ is 1 minus the CDF of T, or $S(t) = 1 - CDF_T(t)$
 
 
 The **Hazard Function** is defined as the probability that the death event occurs at time t, conditional on the fact that the death event has not occurred until time t. 

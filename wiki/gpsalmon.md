@@ -336,7 +336,7 @@ m_* &= k(x_*,X)[k(X^T,X) + \sigma^2I]^{-1}y \\
 k_* &= k(x_*,x_*) - k(x_*,X^T)[k(X^T,X) + \sigma^2I]^{-1}k(X^T,x_*)
 \end{aligned}$$
 
-The predictive distribution of test targets y∗ : add $\sigma^2 I$ to$k_*$$.
+The predictive distribution of test targets y∗ : add $\sigma^2 I$ to$k_*$$
 
 ---
 
@@ -344,7 +344,7 @@ The predictive distribution of test targets y∗ : add $\sigma^2 I$ to$k_*$$.
 
 **Infinite basis sets and Mercer's theorem**
 
-Now consider an infinite set of $$\phi(x)$$. Like a fourier series or a Bessel series.
+Now consider an infinite set of $$\phi(x)$$ Like a fourier series or a Bessel series.
 
 We can construct an infinitely parametric model.
 

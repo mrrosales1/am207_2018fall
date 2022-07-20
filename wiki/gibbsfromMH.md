@@ -22,7 +22,7 @@ Under this proposal distribution, let us see what our MH acceptance probability 
 
 $$A = min(1, \frac{p(x^*)}{p(x^i)}\,\frac{q_k(x^i \vert x^*)}{q_k(x^* \vert x^i)})$$
 
-gives us. We use $p(x^\*) = p(x_{-k}^\*, x_k^\*) = p(x_{k}^\* \vert  x_{-k}^\*)p(x_{-k}^\*)$ to obtain
+gives us. We use $p(x^*) = p(x_{-k}^*, x_k^*) = p(x_{k}^* \vert  x_{-k}^*)p(x_{-k}^*)$ to obtain
 
 $$A = min(1, \frac{p(x_{k}^* \vert  x_{-k}^*)p(x_{-k}^*)}{p(x_{k}^i \vert  x_{-k}^i)p(x_{-k}^i)}\,\frac{q_k(x^i \vert x^*)}{q_k(x^* \vert x^i)})$$
 

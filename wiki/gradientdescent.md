@@ -588,7 +588,7 @@ The difference with SGD is that for each update we use a batch of 50 examples to
 
 Often, the cost function has ravines near local optima, ie. areas where the shape of the function is significantly steeper in certain dimensions than in others. This migh result in a slow convergence to the optimum, since standard gradient descent will keep oscillating about these ravines. In the figures below, the left panel shows convergence without momentum, and the right panel shows the effect of adding momentum:
 
-<table><tr><td><img src="http://sebastianruder.com/content/images/2015/12/without_momentum.gif", width=300, height=300></td><td><img src="http://sebastianruder.com/content/images/2015/12/with_momentum.gif", width=300, height=300></td></tr></table>
+<table><tr><td><img src="https://ruder.io/content/images/2015/12/without_momentum.gif", width=300, height=150></td><td><img src="https://ruder.io/content/images/2015/12/with_momentum.gif", width=300, height=150></td></tr></table>
 
 One way to overcome this problem is by using the concept of momentum, which is borrowed from physics. At each iteration, we remember the update $v = \Delta \theta$ and use this *velocity* vector (which as the same dimension as $\theta$) in the next update, which is constructed as a combination of the cost gradient and the previous update:
 

@@ -32,11 +32,11 @@ $$
 $$
 
 $$
-\renewcommand{\like}{\cal L}
-\renewcommand{\loglike}{\ell}
-\renewcommand{\err}{\cal E}
-\renewcommand{\dat}{\cal D}
-\renewcommand{\hyp}{\cal H}
+\renewcommand{\cal L}{\cal L}
+\renewcommand{\ell}{\ell}
+\renewcommand{\cal E}{\cal E}
+\renewcommand{\cal D}{\cal D}
+\renewcommand{\cal H}{\cal H}
 \renewcommand{\Ex}[2]{E_{#1}[#2]}
 \renewcommand{\x}{\mathbf x}
 \renewcommand{\v}[1]{\mathbf #1}
@@ -242,7 +242,7 @@ $$P(y|\v{x},\v{w}) = P(\{y_i\} | \{\v{x}_i\}, \v{w}) = \prod_{y_i \in \cal{D}} P
 
 Why use probabilities? Earlier, we talked about how the regression function $f(x)$ never gives us the $y$ exactly, because of noise. This hold for classification too. Even with identical features, a different sample may be classified differently. 
 
-We said that another way to think about a noisy $y$ is to imagine that our data $\dat$ was generated from  a joint probability distribution $P(x,y)$. Thus we need to model $y$ at a given $x$, written as $P(y \mid x)$, and since $P(x)$ is also a probability distribution, we have:
+We said that another way to think about a noisy $y$ is to imagine that our data $\cal D$ was generated from  a joint probability distribution $P(x,y)$. Thus we need to model $y$ at a given $x$, written as $P(y \mid x)$, and since $P(x)$ is also a probability distribution, we have:
 
 $$P(x,y) = P(y \mid x) P(x) ,$$
 
@@ -256,23 +256,23 @@ Thus its desirable to have probabilistic, or at the very least, ranked models of
 
 Now if we maximize $$P(y \mid \v{x},\v{w})$$, we will maximize the chance that each point is classified correctly, which is what we want to do. This is a principled way of obtaining the highest probability classification. This **maximum likelihood** estimation maximises the **likelihood of the sample y**, 
 
-$$\like = P(y \mid \v{x},\v{w}).$$ 
+$$\cal L = P(y \mid \v{x},\v{w}).$$ 
 
 
 Again, we can equivalently maximize 
 
-$$\loglike = log(P(y \mid \v{x},\v{w}))$$ 
+$$\ell = log(P(y \mid \v{x},\v{w}))$$ 
 
 since the natural logarithm $log$ is a monotonic function. This is known as maximizing the **log-likelihood**.
 
 
-$$\loglike = log \like = log(P(y \mid \v{x},\v{w})).$$
+$$\ell = log \cal L = log(P(y \mid \v{x},\v{w})).$$
 
 
 Thus
 
 $$\begin{aligned}
-\loglike &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
+\ell &=& log\left(\prod_{y_i \in \cal{D}} h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\
                   &=& \sum_{y_i \in \cal{D}} log\left(h(\v{w}\cdot\v{x_i})^{y_i} \left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\right)\\                  
                   &=& \sum_{y_i \in \cal{D}} log\,h(\v{w}\cdot\v{x_i})^{y_i} + log\,\left(1 - h(\v{w}\cdot\v{x_i}) \right)^{(1-y_i)}\\
                   &=& \sum_{y_i \in \cal{D}} \left ( y_i log(h(\v{w}\cdot\v{x})) + ( 1 - y_i) log(1 - h(\v{w}\cdot\v{x})) \right )

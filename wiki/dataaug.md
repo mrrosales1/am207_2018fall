@@ -56,7 +56,7 @@ import seaborn as sns
 
 Suppose that $p_X$ is the standard normal density, i.e., 
 
-$$p(x) = e^{-x^2/2}/\sqrt{2\pi}$$.
+$$p(x) = e^{-x^2/2}/\sqrt{2\pi}$$
 
 We'll pretend we dont know how to sample from it.
 

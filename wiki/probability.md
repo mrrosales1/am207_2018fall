@@ -270,7 +270,7 @@ Let us simplify the notation by dropping the $X=$ and $Y=$.
 
 Then we can write the marginal probability of x as a sum over the joint distribution of x and y where we sum over all possibilities of y,
 
-$$p(x) = \sum_y p(x,y) $$.
+$$p(x) = \sum_y p(x,y) $$
 
 We can rewrite a joint distribution as a product of a conditional and marginal probability,
 

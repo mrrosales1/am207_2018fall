@@ -88,7 +88,7 @@ All of these considerations may be seen in the diagram below:
 Another way of seeing this whole thing is that we will draw the sample from a proposal
 distribution and re-weight the integral appropriately so that the expectation with respect to the correct distribution is used. And since $f/g$ is flatter than $f$, the variance of $h \times f/g$ is smaller that the variance of $h \times f$ and therefore the error will be smaller for all $N$.
 
-### Example: Calculate $\int_{0}^{\pi} \sin(x) \, x \, dx $
+### Example: Calculate $\int_{0}^{\pi} \sin(x) \, x \, dx$
 
 The function has a shape that is similar to Gaussian and therefore we choose here a Gaussian as importance sampling distribution. 
 

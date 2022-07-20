@@ -48,7 +48,7 @@ It follows directly that for our example we have a binomial with $n=16$ and $\th
 
 $$p( y \vert x ) = g(x) \binom{16}{y} x^{y+1} (1-x)^{16-y} .$$
 
-### The  $ x\vert y$ conditional
+### The  $x\vert y$ conditional
 
 So, now we need the conditional for x|y, and we know from Bayes' theorem that :
 

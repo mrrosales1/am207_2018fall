@@ -37,7 +37,6 @@ import pymc3 as pm
 
 $$\newcommand{\isum}{\sum_{i}}$$
 $$\newcommand{\zsum}{\sum_{k=1}^{K}}$$
-$$\newcommand{\zsumi}{\sum_{\{z_i\}}}$$
 
 ## A toy problem
 
@@ -417,7 +416,7 @@ But they may not be the ones we seeded the samples with. The Em algorithm is onl
 
 ## The EM algorithm
 
-** Expectation-maximization (EM)** method is an iterative method for maximizing difficult 
+*Expectation-maximization (EM)* method is an iterative method for maximizing difficult 
 likelihood (or posterior) problems. It was first introduced by Dempster, Laird, and Rubin (1977). 
 
 EM recognizes that if the data were fully observed, then  ML/ MAP estimates would be easy to compute. It thus alternates between inferring the missing values given the parameters (E step), and then optimizing the parameters given the “filled in” data (M step). 
@@ -456,11 +455,11 @@ $$p(x \vert \theta) = \sum_z p(x, z \vert \theta)$$
 
 where the $x$ and $z$ range over the multiple points in your data set.
 
-Then $$\ell( x \vert \theta) = log\, p(x \vert \theta) = log\, \sum_z p(x, z \vert \theta)$$
+Then $\ell( x \vert \theta) = log\, p(x \vert \theta) = log\, \sum_z p(x, z \vert \theta)$
 
 Assume $z$ has some normalized distribution:
 
-$$z \sim q(z)$$.
+$$z \sim q(z)$$
 
 We wish to compute conditional expectations of the type:
 
@@ -556,10 +555,10 @@ I often find it confusing as to what the indices are actually doing if I dont wr
 
 Suppose we have an estimation problem in which we have data consising of $m$ independent examples $\{x_1,\ldots,x_m\}$ . 
 The goal is to fit the parameters of the model, where the log-likelihood is given by 
-\begin{aligned}
+$$\begin{aligned}
 \ell(x  \vert  \theta)&=& \log \prod_{i=1}^{m} p(x_i \vert  \theta) =   \sum_{i=1}^{m} \log \,p(x_i \vert  \theta)  \\ 
-   &=& \sum_{i=1}^{m} \log \zsumi \,p(x_i,z \vert  \theta)  \\ 
-\end{aligned}
+   &=& \sum_{i=1}^{m} \log \sum_{\{z_i\}} \,p(x_i,z \vert  \theta)  \\ 
+\end{aligned}$$
 
 where the $z$ are the latent random variables. If $z$ were observed then the maximum likelihood estimation would be easy. 
 
@@ -569,34 +568,33 @@ $$\ell(x, z  \vert  \theta) = \sum_{i=1}^{m}  \log \,p(x_i, z_i  \vert  \theta),
 
  which is the log-likelihood we'd calculate if we knew all the $z_i$. But we do not know thse, so lets assume the $\{z_i\}$ have some normalized distribution $q(z)$, and calculate the expected value of the full data log likelihood with respect to this distribution:
 
-
-\begin{aligned}
-\mathrm{E_q[\ell( x,z  \vert  \theta)]}  &=& \sum_i \zsumi q_{i}(z_i) \log \,p(x_i, z_i  \vert  \theta)\\
-    &=& \sum_i \zsumi q_{i}(z_i) \log \,\frac{p(x_i, z_i  \vert  \theta)}{q_{i}(z_i)} +  \sum_i \zsumi q_{i}(z_i) \log \,q_{i}(z_i)
-\end{aligned}
+$$\begin{aligned}
+\mathrm{E_q[\ell( x,z  \vert  \theta)]}  &=& \sum_i \sum_{\{z_i\}} q_{i}(z_i) \log \,p(x_i, z_i  \vert  \theta)\\
+    &=& \sum_i \sum_{\{z_i\}} q_{i}(z_i) \log \,\frac{p(x_i, z_i  \vert  \theta)}{q_{i}(z_i)} +  \sum_i \sum_{\{z_i\}} q_{i}(z_i) \log \,q_{i}(z_i)
+\end{aligned}$$
 
 The second term only involves $q$ and is independent of $\theta$. Looking only at the first term inside the i-summation:
 
-\begin{aligned}
-\mathcal{L}(i, q, \theta) &=&  \zsumi q_{i}(z_i) \log \,\frac{p(x_i, z_i  \vert  \theta)}{q_{i}(z_i)} \\
-&=& \zsumi  q_i(z_i) \left( \log \frac{p(z_i \vert  x_i,  \theta)}{ q_i(z_i)} + \log p(x_i  \vert  \theta)\right)
-\end{aligned}
+$$\begin{aligned}
+\mathcal{L}(i, q, \theta) &=&  \sum_{\{z_i\}} q_{i}(z_i) \log \,\frac{p(x_i, z_i  \vert  \theta)}{q_{i}(z_i)} \\
+&=& \sum_{\{z_i\}}  q_i(z_i) \left( \log \frac{p(z_i \vert  x_i,  \theta)}{ q_i(z_i)} + \log p(x_i  \vert  \theta)\right)
+\end{aligned}$$
 
-we can see that, since $\zsumi q_i(z_i) = 1$:
+we can see that, since $\sum_{\{z_i\}} q_i(z_i) = 1$:
 
-\begin{aligned}
-\mathcal{L}(i, q, \theta) &=& \zsumi  q_i(z_i) \left( \log \frac{p(z_i \vert  x_i,  \theta)}{ q_i(z_i)} + \log p(x_i  \vert  \theta)\right)\\
+$$\begin{aligned}
+\mathcal{L}(i, q, \theta) &=& \sum_{\{z_i\}}  q_i(z_i) \left( \log \frac{p(z_i \vert  x_i,  \theta)}{ q_i(z_i)} + \log p(x_i  \vert  \theta)\right)\\
     &=& -\mathrm{KL}\left(q_i  \vert  \vert  p_i \right) + \log p(x_i  \vert  \theta)\\
-\end{aligned}
+\end{aligned}$$
 
 where $\mathrm{KL}$ is the Kullback-Leibler divergence between $q(x)$ and the hidden variable posterior distribution $p(z \vert x,\theta)$ at the poin $i$.
 
 Since the sum over the data-points of the second term is just the log-likelihood we desire, it can then can be written as:
 
-\begin{aligned}
+$$\begin{aligned}
 \ell(x  \vert  \theta) &=& \sum_i \left(\mathcal{L}(i, q, \theta) +\mathrm{KL}\left(q_i   \vert  \vert  p_i \right)\right)\\
 &=& \mathcal{L}(q, \theta) + \mathrm{KL}\left(q  \vert  \vert  p \right)
-\end{aligned}
+\end{aligned}$$
 
 where we are defining:
 

@@ -34,17 +34,6 @@ sns.set_context("poster")
 ```
 
 
-$$
-\renewcommand{\like}{{\cal L}}
-\renewcommand{\loglike}{{\ell}}
-\renewcommand{\err}{{\cal E}}
-\renewcommand{\dat}{{\cal D}}
-\renewcommand{\hyp}{{\cal H}}
-\renewcommand{\Ex}[2]{E_{#1}[#2]}
-\renewcommand{\x}{{\mathbf x}}
-\renewcommand{\v}[1]{{\mathbf #1}}
-$$
-
 First some often used routines.
 
 
@@ -155,7 +144,7 @@ But there are drawbacks. It seems crazy to assume that the empirical distributio
 
 ![Bayesian learning](images/bayesrisk.png)
 
-The alternative is to first do density estimation. We estimate $p(x,y)$ (or $p(x,c)$) from the training data. (Note that this can be thought of as ERM on risk $-log(p)$). (In the "Learning Models" lab we said that another way to think about a noisy $y$ is to imagine that our data $\dat$ was generated from  a joint probability distribution $p(x,y)$ rather than some well given function$y=f(x)$.)
+The alternative is to first do density estimation. We estimate $p(x,y)$ (or $p(x,c)$) from the training data. (Note that this can be thought of as ERM on risk $-log(p)$). (In the "Learning Models" lab we said that another way to think about a noisy $y$ is to imagine that our data $\cal D$ was generated from  a joint probability distribution $p(x,y)$ rather than some well given function$y=f(x)$.)
 
 The joint distribution can be constructed in two ways: generative or discriminative. The **discriminative** approach gives us:
 
@@ -391,7 +380,7 @@ $$P(y = c_1 | \v{x}) = \frac{P(\v{x} | y = c_1, \theta_1) P(y=c_1)}{P(\v{x} | y 
 
 In other words, we first look at males, and build a model of the features for the males. Then we do a similar thing for females. To classify a new sample, we match it against the model for males, and then the model for females, and user Bayes theorem to see if the new sample more likely looks like the males rather than the females from the training set. 
 
-Another way to think about this is that you can **generate** or simulate a new male or female sample from this model $P(\v{x} | y, \theta_y)$ of males or females respectively. The idea is that you first toss a (possibly biased) coin which depends on $P(y=c_1)$, the "prior" probability of a sample being male or female. Once that coin has landed male or female ("once the draw has been made"), generate a sample in feature space using $P(\v{x}|what landed)$. For example, if the coin landed female, now draw a height and weight according to $$P(height, wieght | female )$$. Thus there is a *story* for how to generate samples in such models. If this story is the "correct" or "nearly correct" one, this is likely to be a very good model, and furthermore, we can draw new training sets to check variance and other measures of our classifier's accuracy.
+Another way to think about this is that you can **generate** or simulate a new male or female sample from this model $P(\v{x} | y, \theta_y)$ of males or females respectively. The idea is that you first toss a (possibly biased) coin which depends on $P(y=c_1)$, the "prior" probability of a sample being male or female. Once that coin has landed male or female ("once the draw has been made"), generate a sample in feature space using $P(\v{x}|what landed)$. For example, if the coin landed female, now draw a height and weight according to $P(height, weight | female )$. Thus there is a *story* for how to generate samples in such models. If this story is the "correct" or "nearly correct" one, this is likely to be a very good model, and furthermore, we can draw new training sets to check variance and other measures of our classifier's accuracy.
 
 You can see three important aspects of this method from these formulae already. First, you model the classes separately. Secondly, the formula involves $P(y)$, the prior probability of the sample being in the class. This is usually just taken to be the fraction of a particular class in the training sample. 
 

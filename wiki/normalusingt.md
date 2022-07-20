@@ -177,7 +177,7 @@ Notice that the number of rejected samples is roughly 2500. This is because the 
 
 ## Expectation values
 
-Lets calculate the expectation value $$E_f[h]$$ using the rejection samples obtained.
+Lets calculate the expectation value $E_f[h]$ using the rejection samples obtained.
 
 Here is a $h$:
 

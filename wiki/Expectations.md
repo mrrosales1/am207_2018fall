@@ -96,7 +96,7 @@ $$
 
 The variance of a distribution is defined analogous to that of a dataset:
 
-$$V_f[X] = E_f[(X-E_f[X])^2]$$.
+$$V_f[X] = E_f[(X-E_f[X])^2]$$
 
 For the Bernoulli distribution $f(x)=p=constant$, and you are summing it over ones as opposed to 0's, so the mean is just p. The variance is $(1-p)^2\times p +(-p)^2\times (1-p) = p(1-p)(1-p+p) = p(1-p)$.
 
